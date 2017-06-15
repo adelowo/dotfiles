@@ -1,0 +1,11 @@
+[user]
+	email = me@lanreadelowo.com
+	name = Lanre Adelowo
+[push]
+	default = simple
+[core]
+	editor = vi
+	excludesfile = ~/.gitignore_global
+[alias]
+	prune = "fetch --prune" 
+
