@@ -1,10 +1,53 @@
-
 "Vi ? WTF ? We go back to 1995"
 set nocompatible
 
-" Hide dot directories and swap files
+:let mapleader = ","
 
- let g:netrw_list_hide= '.*\.swp\*,.*\.swp$,.*\.swp\s,.*/$,.*/\s'
+execute pathogen#infect()
+
+filetype plugin indent on
+syntax on
+set number  " What is a code editor without line number ?
+let g:go_disable_autoinstall = 0
+
+" Highlight important stuffs 
+let g:go_highlight_functions = 1  
+let g:go_highlight_methods = 1  
+let g:go_highlight_structs = 1  
+let g:go_highlight_operators = 1  
+let g:go_highlight_build_constraints = 1 
+
+
+"" Neocomplete
+ 
+let g:neocomplete#enable_at_startup = 1 "autcompletion is life
+
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+
+" Autocomplete should only kick in if I already have more than 3 letters.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd filetype html,markdown setlocal omnifunc=htmlcomplete#completetags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" colorscheme molokai
+ syntax enable
+ set background=dark
+ colorscheme material-theme
+
+"Specific mappings for Go
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gr <Plug>(go-run)
+au FileType go nmap <Leader>gb <Plug>(go-build)
+au FileType go nmap <Leader>gt <Plug>(go-test)
+
 
 " allow backspacing over everything 
 set backspace=indent,eol,start
@@ -69,47 +112,5 @@ if has('langmap') && exists('+langnoremap')
   set langnoremap
 endif
 
-
-
-" Add optional packages.
-"
-" The matchit plugin makes the % command work better, but it is not backwards
-" compatible.
 packadd matchit
-
-"" Nice to see vim gettng infected with awesomeness
-
-execute pathogen#infect()
-
-filetype plugin indent on
-syntax on
-set number  " What is a code editor without line number ?
-let g:go_disable_autoinstall = 0
-
-" Highlight important stuffs 
-let g:go_highlight_functions = 1  
-let g:go_highlight_methods = 1  
-let g:go_highlight_structs = 1  
-let g:go_highlight_operators = 1  
-let g:go_highlight_build_constraints = 1 
-
-
-"" Neocomplete
- 
-let g:neocomplete#enable_at_startup = 1 "autcompletion is life
-
-" Autocomplete should only kick in if I already have more than 3 letters.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd filetype html,markdown setlocal omnifunc=htmlcomplete#completetags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" colorscheme molokai
- syntax enable
- set background=dark
- colorscheme material-theme
 
