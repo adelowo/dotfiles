@@ -7,6 +7,9 @@ let g:netrw_banner = 0
 
 execute pathogen#infect()
 
+map - dd
+nmap <F8> :TagbarToggle<CR>
+
 filetype plugin indent on
 syntax on
 set number  " What is a code editor without line number ?
