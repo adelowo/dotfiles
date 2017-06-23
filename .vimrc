@@ -3,6 +3,7 @@ set nocompatible
 
 :let mapleader = ","
 :let g:netrw_liststyle = 3
+let g:netrw_banner = 0
 
 execute pathogen#infect()
 
@@ -28,8 +29,6 @@ let g:neocomplete#enable_smart_case = 1
 
 " Autocomplete should only kick in if I already have more than 3 letters.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
-
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
