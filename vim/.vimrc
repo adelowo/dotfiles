@@ -9,6 +9,7 @@ execute pathogen#infect()
 
 map - dd
 nmap <F8> :TagbarToggle<CR>
+nmap <F1> :Rexplore<CR>
 
 filetype plugin indent on
 syntax on
