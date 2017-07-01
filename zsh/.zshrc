@@ -35,7 +35,7 @@ alias ctag="gotags -tag-relative=true -R=true -sort=true -f="tags" -fields=+l ."
 alias boom="sudo usb_modeswitch -v 05c6  -p 1000 -V 05c6 -P 1000 -M "5553424312345678000000000000061b000000020000000000000000000000" && sudo wvdial" 
 
 # Some other useful plugins 
-source $HOME/.zsh/plugins/bd/bd.zsh
+source $HOME/.zsh/bd/bd.zsh
 
 ## Simulate the awesome highlighting and autocompletion of fish shell
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
