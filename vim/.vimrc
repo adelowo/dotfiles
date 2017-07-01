@@ -1,6 +1,12 @@
 "Vi ? WTF ? We go back to 1995"
 set nocompatible
 
+"Disable arrow keys
+nnoremap <Up> :echomsg "disabled.. Use k"<CR>
+nnoremap <Down> :echomsg "disabled.Use j"<CR>
+nnoremap <Left> :echomsg "disabled. Use h"<CR>
+nnoremap <Right> :echomsg "disabled..Use l"<CR>
+
 :let mapleader = ","
 :let g:netrw_liststyle = 3
 let g:netrw_banner = 0
