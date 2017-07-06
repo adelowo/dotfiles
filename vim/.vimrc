@@ -57,6 +57,7 @@ au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gr <Plug>(go-run)
 au FileType go nmap <Leader>gb <Plug>(go-build)
 au FileType go nmap <Leader>gt <Plug>(go-test)
+au FileType go nmap <Leader>ga :GoAlternate<CR>
 
 " allow backspacing over everything 
 set backspace=indent,eol,start
