@@ -39,3 +39,5 @@ source $HOME/.zsh/bd/bd.zsh
 
 ## Simulate the awesome highlighting and autocompletion of fish shell
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source ~/.secrets
