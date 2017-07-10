@@ -30,6 +30,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 alias random="< /dev/urandom tr -dc A-Za-z0-9 | head -c47; echo"
 alias ctag="gotags -tag-relative=true -R=true -sort=true -f="tags" -fields=+l ."
 alias vim="nvim"
+alias git_authors="git shortlog -s | cut -c8-"
+alias git_prune_branches="git branch | grep -v "master" | sed 's/^[ *]*//' | sed 's/^/git branch -D /' | zsh"
 
 ## Sometimes my nternet modem comes up as a mass storage device... Here is the fix for that
 alias boom="sudo usb_modeswitch -v 05c6  -p 1000 -V 05c6 -P 1000 -M "5553424312345678000000000000061b000000020000000000000000000000" && sudo wvdial" 
