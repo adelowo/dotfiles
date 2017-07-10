@@ -2,7 +2,6 @@ call plug#begin("~/.config/nvim/plugged")
 
 " Dependencies
 Plug 'Shougo/neocomplcache'        " Dependency for Shougo/neosnippet
-Plug 'tpope/vim-rhubarb'           " Dependency for tpope/fugitive
 
 "" General Plugins
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -14,7 +13,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
@@ -45,6 +43,7 @@ let mapleader = ","
 map - dd
 nmap <F8> :TagbarToggle<CR>
 nmap <Leader><Leader> :NERDTreeToggle<CR>
+nmap <Leader><Leader>. :NERDTreeFocus<CR>
 
 filetype plugin indent on
 syntax on
