@@ -64,8 +64,14 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1  
 let g:go_highlight_operators = 1  
 let g:go_highlight_build_constraints = 1 
+let g:go_auto_sameids = 1
 let g:go_fmt_command = "goimports"
 let g:go_addtags_transform = "snakecase"
+let g:go_snippet_engine = "neosnippet"
+
+let g:ale_sign_error = '⤫'
+let g:ale_sign_warning = '⚠'
+let g:airline#extensions#ale#enabled = 1
 
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -87,6 +93,8 @@ au FileType go nmap <Leader>gb <Plug>(go-build)
 au FileType go nmap <Leader>gt <Plug>(go-test)
 au FileType go nmap <Leader>ga :GoAlternate<CR>
 au FileType go nmap <Leader>gi <Plug>(go-info)
+
+let g:deoplete#enable_at_startup = 1
 
 " allow backspacing over everything 
 set backspace=indent,eol,start
