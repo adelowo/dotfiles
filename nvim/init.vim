@@ -40,22 +40,17 @@ nnoremap <Down> :echomsg "disabled.Use j"<CR>
 nnoremap <Left> :echomsg "disabled. Use h"<CR>
 nnoremap <Right> :echomsg "disabled..Use l"<CR>
 
-:let mapleader = ","
-:let g:netrw_liststyle = 3
-let g:netrw_banner = 0
-
+let mapleader = ","
 
 map - dd
 nmap <F8> :TagbarToggle<CR>
-nmap <F1> :NERDTreeToggle<CR>
+nmap <Leader><Leader> :NERDTreeToggle<CR>
 
 filetype plugin indent on
 syntax on
 set number  " What is a code editor without line number ?
 
 let g:go_disable_autoinstall = 0
-
-" Highlight important stuffs 
 let g:go_auto_type_info = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_fields = 1
@@ -84,7 +79,9 @@ endif
 " colorscheme molokai
  syntax enable
  set background=dark
- colorscheme material-theme
+ set t_Co=256 
+ colorscheme PaperColor
+ " colorscheme material-theme
 
 "Specific mappings for Go
 au FileType go nmap <Leader>gd <Plug>(go-doc)
