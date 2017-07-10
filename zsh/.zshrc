@@ -18,8 +18,7 @@ plugins=(git z)
 
 source $ZSH/oh-my-zsh.sh
 
-export EDITOR="vim"
-
+export EDITOR="nvim"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -30,6 +29,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Cannot remember the usecase i had for this though
 alias random="< /dev/urandom tr -dc A-Za-z0-9 | head -c47; echo"
 alias ctag="gotags -tag-relative=true -R=true -sort=true -f="tags" -fields=+l ."
+alias vim="nvim"
 
 ## Sometimes my nternet modem comes up as a mass storage device... Here is the fix for that
 alias boom="sudo usb_modeswitch -v 05c6  -p 1000 -V 05c6 -P 1000 -M "5553424312345678000000000000061b000000020000000000000000000000" && sudo wvdial" 
