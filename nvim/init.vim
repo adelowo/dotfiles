@@ -1,7 +1,40 @@
-"Vi ? WTF ? We go back to 1995"
-set nocompatible
+call plug#begin("~/.config/nvim/plugged")
 
-"Disable arrow keys
+" Dependencies
+Plug 'Shougo/neocomplcache'        " Dependency for Shougo/neosnippet
+Plug 'tpope/vim-rhubarb'           " Dependency for tpope/fugitive
+
+"" General Plugins
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'  
+Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-airline'
+Plug 'junegunn/goyo.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'vimwiki/vimwiki'
+Plug 'w0rp/ale'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-commentary'
+
+
+"" Language specific plugins
+
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'plasticboy/vim-markdown'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+
+
+"" Color schemes
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'jdkanani/vim-material-theme'
+
+call plug#end()
+
+"GOD mode
 nnoremap <Up> :echomsg "disabled.. Use k"<CR>
 nnoremap <Down> :echomsg "disabled.Use j"<CR>
 nnoremap <Left> :echomsg "disabled. Use h"<CR>
@@ -11,15 +44,15 @@ nnoremap <Right> :echomsg "disabled..Use l"<CR>
 :let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 
-execute pathogen#infect()
 
 map - dd
 nmap <F8> :TagbarToggle<CR>
-nmap <F1> :Rexplore<CR>
+nmap <F1> :NERDTreeToggle<CR>
 
 filetype plugin indent on
 syntax on
 set number  " What is a code editor without line number ?
+
 let g:go_disable_autoinstall = 0
 
 " Highlight important stuffs 
@@ -33,23 +66,6 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1 
 let g:go_fmt_command = "goimports"
 let g:go_addtags_transform = "snakecase"
-
-"" Neocomplete
- 
-let g:neocomplete#enable_at_startup = 1 "autcompletion is life
-
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-
-" Autocomplete should only kick in if I already have more than 3 letters.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd filetype html,markdown setlocal omnifunc=htmlcomplete#completetags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -134,6 +150,4 @@ if has('langmap') && exists('+langnoremap')
   " compatible).
   set langnoremap
 endif
-
-packadd matchit
 
