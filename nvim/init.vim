@@ -49,6 +49,11 @@ filetype plugin indent on
 syntax on
 set number  " What is a code editor without line number ?
 
+let g:vim_markdown_new_list_item_indent = 2
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_no_extensions_in_markdown = 1
+let g:vim_markdown_autowrite = 1
+
 let g:go_disable_autoinstall = 0
 let g:go_auto_type_info = 1
 let g:go_highlight_fields = 1
@@ -87,13 +92,11 @@ au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gr <Plug>(go-run)
 au FileType go nmap <Leader>gb <Plug>(go-build)
 au FileType go nmap <Leader>gt <Plug>(go-test)
-au FileType go nmap <Leader>ga :GoAlternate<CR>
+au FileType go nmap <Leader>ga <Plug>(go-alternate-edit) 
 au FileType go nmap <Leader>gi <Plug>(go-info)
+au FileType go nmap <Leader>gat :GoAddTags<CR>
 
 let g:deoplete#enable_at_startup = 1
-
-" allow backspacing over everything 
-set backspace=indent,eol,start
 
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
@@ -154,4 +157,3 @@ if has('langmap') && exists('+langnoremap')
   " compatible).
   set langnoremap
 endif
-
