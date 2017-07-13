@@ -1,3 +1,8 @@
+"" Disable F1 bringing up the help doc every damn time 
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
 call plug#begin("~/.config/nvim/plugged")
 
 " Dependencies
