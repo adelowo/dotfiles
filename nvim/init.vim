@@ -29,11 +29,14 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'plasticboy/vim-markdown'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
-
+Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
 
 "" Color schemes
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'jdkanani/vim-material-theme'
+
+"" Miscellaneous
+Plug 'fszymanski/deoplete-emoji'
 
 call plug#end()
 
