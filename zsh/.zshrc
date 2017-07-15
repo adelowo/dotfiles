@@ -29,7 +29,11 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Cannot remember the usecase i had for this though
 alias random="< /dev/urandom tr -dc A-Za-z0-9 | head -c47; echo"
 alias ctag="gotags -tag-relative=true -R=true -sort=true -f="tags" -fields=+l ."
-alias vim="nvim"
+
+if type nvim > /dev/null 2>&1; then
+  alias vim="nvim"
+fi
+
 alias git_authors="git shortlog -s | cut -c8-"
 alias git_prune_branches="git branch | ack --match="  " | sed 's/^[ *]*//' | sed 's/^/git branch -D /' | zsh"
 
