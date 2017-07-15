@@ -83,6 +83,7 @@ let g:airline#extensions#ale#enabled = 1
 let NERDTreeShowHidden=1
 let NERDTreeDirArrowExpandable = '▷'
 let NERDTreeDirArrowCollapsible = '▼'
+let NERDTreeIgnore=['\~$', 'node_modules[[dir]]']
 
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
