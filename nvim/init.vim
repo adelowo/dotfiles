@@ -84,6 +84,8 @@ let NERDTreeShowHidden=1
 let NERDTreeDirArrowExpandable = '▷'
 let NERDTreeDirArrowCollapsible = '▼'
 let NERDTreeIgnore=['\~$', 'node_modules[[dir]]']
+let NERDTreeWinSize=45
+let NERDTreeQuitOnOpen=1
 
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -110,6 +112,65 @@ au FileType go nmap <Leader>gi <Plug>(go-info)
 au FileType go nmap <Leader>gat :GoAddTags<CR>
 
 let g:deoplete#enable_at_startup = 1
+
+
+" Runs the phpcbf tool for fixing php files code style
+"
+" TODO(adelowo) Find a nice way to make this work with the ":w" command
+" au BufWritePost *.php :call PHPCBFFile()
+" The above works but I lose syntax color in the editor.. I think the culprit
+" is the :edit! call but I need that to reload changes to the file..Running
+" :edit! in the editor again returns the syntax coloring but that is just too
+" much work.
+" If I run this function via a key mapping, it seems to do just fine. I get
+" the changes and don't lose syntax coloring.
+function! PHPCBFFile() abort
+
+	if !executable("phpcbf")
+		echohl Error | echo "Phpcbf not found.. Install the phpcbf library" | echo None
+	endif
+
+	:w "Make sure the buffer is saved... This would be removed if I fix the above todo item.
+	let s:out = system("phpcbf --pattern=PSR2 "." ". expand("%")) 
+	
+	:edit!
+
+	" TODO(adelowo) If there are errors, write those out to a new window.
+	" The details written should include the file path and the line(s)
+	" affected. This would ease navigating to the specific line easily
+	"
+	" let has_errors = 0
+
+	" for line in split(s:out,"\n")
+	" 	if match(line, 'Files that were not fixed due to errors reported during linting before fixing:') != -1
+	" 		let has_errors = 1 
+	" 	end	
+	" endfor
+
+	" if has_errors == 1 
+	" 	setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap winfixheight
+	" 	setlocal cursorline
+  	"	setlocal nonumber
+  	"	setlocal norelativenumber
+  	"	setlocal showbreak=""
+	" 	setlocal modifiable "Since we are trying to write the output to the window
+		
+	" 	delete everything first from the buffer
+        "	 %delete _
+	
+        "	 call append(0, s:out)
+
+	"	 $delete _
+
+        "	 setlocal nomodifiable "Make sure the window isn't writable
+
+        "  	It isn't a new file so remove the '[New File]' message line from the command line
+        "	 echon
+	" endif
+	
+endfunction
+
+au FileType php nmap <Leader>pf :call PHPCBFFile()<CR> 
 
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
