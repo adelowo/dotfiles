@@ -8,4 +8,6 @@
 	excludesfile = ~/.gitignore_global
 [alias]
 	prune = "fetch --prune" 
-
+        authors = "!git shortlog -s | cut -c8-"
+	; bclean clears up all local branches leaving only master
+	bclean = "!git branch | ack --match='  ' | sed 's/^[ *]*//' | sed 's/^/git branch -D /' | zsh"

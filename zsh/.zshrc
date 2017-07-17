@@ -34,8 +34,6 @@ if type nvim > /dev/null 2>&1; then
   alias vim="nvim"
 fi
 
-alias git_authors="git shortlog -s | cut -c8-"
-alias git_prune_branches="git branch | ack --match="  " | sed 's/^[ *]*//' | sed 's/^/git branch -D /' | zsh"
 
 ## Sometimes my nternet modem comes up as a mass storage device... Here is the fix for that
 alias boom="sudo usb_modeswitch -v 05c6  -p 1000 -V 05c6 -P 1000 -M "5553424312345678000000000000061b000000020000000000000000000000" && sudo wvdial" 
