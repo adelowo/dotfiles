@@ -24,6 +24,8 @@ Plug 'tpope/vim-commentary'
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
+Plug 'janko-m/vim-test'
+
 
 "" Language specific plugins
 
@@ -31,7 +33,7 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'plasticboy/vim-markdown'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
-Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
+Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 
 "" Color schemes
 Plug 'NLKNguyen/papercolor-theme'
@@ -54,6 +56,12 @@ map - dd
 nmap <F8> :TagbarToggle<CR>
 nmap <Leader><Leader> :NERDTreeToggle<CR>
 nmap <Leader><Leader>. :NERDTreeFocus<CR>
+
+nmap <Leader>t :TestNearest<CR>
+nmap <Leader>tt :TestFile<CR>
+nmap <Leader>ta :TestSuite<CR>
+nmap <Leader>tl :TestLast<CR>
+nmap <Leader>tv :TestVisit<CR>
 
 filetype plugin indent on
 syntax on
@@ -88,6 +96,11 @@ let NERDTreeDirArrowCollapsible = '▼'
 let NERDTreeIgnore=['\~$', 'node_modules[[dir]]']
 let NERDTreeWinSize=45
 let NERDTreeQuitOnOpen=1
+
+let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+let g:deoplete#ignore_sources.php = ['omni']
+
+autocmd FileType php setlocal omnifunc=phpcd#CompletePHP
 
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
