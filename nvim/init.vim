@@ -63,6 +63,9 @@ nmap <Leader>ta :TestSuite<CR>
 nmap <Leader>tl :TestLast<CR>
 nmap <Leader>tv :TestVisit<CR>
 
+" Mimic CTRL-P in sublime text
+nmap <C-p> :Files<CR>
+
 filetype plugin indent on
 syntax on
 set number  " What is a code editor without line number ?
