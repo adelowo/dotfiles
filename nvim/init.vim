@@ -213,7 +213,12 @@ function Godo() abort
 
 	if expand('%:e') ==# s:valid_ext
 		let s:out = system("astitodo ". expand("%"))
-		
+	
+		if s:out == ""
+			echohl WarningMessage | echo "There are no todos in this file" | echohl None
+			return 1
+		endif	
+
 		botright new
 		setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap
 		set nonumber
