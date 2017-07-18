@@ -41,6 +41,7 @@ Plug 'jdkanani/vim-material-theme'
 
 "" Miscellaneous
 Plug 'fszymanski/deoplete-emoji'
+Plug 'adelowo/godo' " Todo viewer for Golang
 
 call plug#end()
 
@@ -196,53 +197,6 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set hls                 "Highlight all matching patterns... Can be annoying sometimes though, I sometimes have to run :set nohls in the editor"
 
-
-
-" Godo.vim
-
-nnoremap <Leader>. :call Godo()<CR>
-
-function Godo() abort
-	
-	let s:valid_ext = "go"
-
-	if !s:hasAstitido()
-		echohl Error | echo "Please install the astitodo library" | echohl None
-		return 0
-	endif
-
-	if expand('%:e') ==# s:valid_ext
-		let s:out = system("astitodo ". expand("%"))
-	
-		if s:out == ""
-			echohl WarningMessage | echo "There are no todos in this file" | echohl None
-			return 1
-		endif	
-
-		botright new
-		setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap
-		set nonumber
-
-		let s:line_count = 0
-
-		for line in split(s:out, '\n')
-			let s:line_count = s:line_count + 1
-			call setline(s:line_count, line)
-		endfor
-
-		setlocal nomodifiable
-		return 1
-	else
-		echohl Error | echo "Godo works only with source code for the Go programming language" | echohl None
-	endif
-	
-endfunction
-
-function s:hasAstitido() abort
-	if executable('astitodo')
-		return 1
-	endif
-endfunction
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
