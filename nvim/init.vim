@@ -132,6 +132,10 @@ au FileType go nmap <Leader>gat :GoAddTags<CR>
 
 let g:deoplete#enable_at_startup = 1
 
+let g:godo_install_verbose = 1
+let g:go_get_update = 1
+
+nnoremap <Leader>. :call go#godo#Godo()<CR>
 
 " Runs the phpcbf tool for fixing php files code style
 "
