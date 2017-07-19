@@ -9,5 +9,8 @@
 [alias]
 	prune = "fetch --prune" 
         authors = "!git shortlog -s | cut -c8-"
-	; bclean clears up all local branches leaving only master
+	; bclean clears up all local branches leaving only the current active branch.
+	; Say you have 5 branches (including master), then you checkout the fiend branch.
+	; Running git bclean would delete the other 4 branches, leaving only the fiend branch.
+	; Run this with caution.
 	bclean = "!git branch | ack --match='  ' | sed 's/^[ *]*//' | sed 's/^/git branch -D /' | zsh"
