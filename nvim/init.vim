@@ -138,25 +138,15 @@ let g:go_get_update = 1
 nnoremap <Leader>. :call go#godo#Godo()<CR>
 
 " Runs the phpcbf tool for fixing php files code style
-"
-" TODO(adelowo) Find a nice way to make this work with the ":w" command
-" au BufWritePost *.php :call PHPCBFFile()
-" The above works but I lose syntax color in the editor.. I think the culprit
-" is the :edit! call but I need that to reload changes to the file..Running
-" :edit! in the editor again returns the syntax coloring but that is just too
-" much work.
-" If I run this function via a key mapping, it seems to do just fine. I get
-" the changes and don't lose syntax coloring.
 function! PHPCBFFile() abort
 
 	if !executable("phpcbf")
 		echohl Error | echo "Phpcbf not found.. Install the phpcbf library" | echo None
 	endif
 
-	:w "Make sure the buffer is saved... This would be removed if I fix the above todo item.
 	let s:out = system("phpcbf --pattern=PSR2 "." ". expand("%")) 
 	
-	:edit!
+	:edit! "reload changes to the file
 
 	" TODO(adelowo) If there are errors, write those out to a new window.
 	" The details written should include the file path and the line(s)
@@ -193,14 +183,15 @@ function! PHPCBFFile() abort
 	
 endfunction
 
-au FileType php nmap <Leader>pf :call PHPCBFFile()<CR> 
+" Format php code with phpcbf on saving the file
+autocmd BufWritePre *.php call PHPCBFFile()
+autocmd BufWritePost *.php doautocmd Syntax
 
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set hls                 "Highlight all matching patterns... Can be annoying sometimes though, I sometimes have to run :set nohls in the editor"
-
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
