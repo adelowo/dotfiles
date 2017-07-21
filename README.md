@@ -4,7 +4,7 @@ There be little :dragon: :dragon: :dragon: :dragon: :dragon: :dragon: !.. This r
 
 Here is what my editor currently looks like 
 
-![Neovim](https://github.com/adelowo/godo/blob/master/db/nvim.png)
+![Neovim](https://github.com/adelowo/dotfiles/blob/master/db/nvim.png)
 
 To make use of this ;
 
