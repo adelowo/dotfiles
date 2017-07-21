@@ -14,7 +14,7 @@ mkdir -p ~/.zsh/plugin
 
 mkdir ~/.config
 
-echo "Creating a symbolic link to the home directory for .vimrc and .zshrc"
+echo "Creating a symbolic link to the home directory for init.vim and .zshrc"
 
 ## Remove any old .vimrc and .zshrc files
 rm ~/.zshrc
