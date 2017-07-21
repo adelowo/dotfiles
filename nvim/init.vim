@@ -144,7 +144,9 @@ function! PHPCBFFile() abort
 		echohl Error | echo "Phpcbf not found.. Install the phpcbf library" | echo None
 	endif
 
-	let s:out = system("phpcbf --pattern=PSR2 "." ". expand("%")) 
+	:w
+
+	let s:out = system("phpcbf --pattern='psr2' "." ". expand("%")) 
 	
 	:edit! "reload changes to the file
 
@@ -183,9 +185,7 @@ function! PHPCBFFile() abort
 	
 endfunction
 
-" Format php code with phpcbf on saving the file
-autocmd BufWritePre php call PHPCBFFile()
-autocmd BufWritePost php doautocmd Syntax
+au FileType php nmap <Leader>pf :call PHPCBFFile()<CR>
 
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
