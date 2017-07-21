@@ -1,0 +1,16 @@
+--ignore-ack-defaults
+
+--ignore-directory=is:.git
+--ignore-directory=is:SCCS
+--ignore-directory=is:node_modules
+
+--ignore-file=ext:bak
+--ignore-file=match:/~$/
+--ignore-file=match:/[._].*\.swp$/
+--ignore-file=match:/core\.\d+$/
+--ignore-file=match:/[.-]min[.]js$/
+--ignore-file=match:/[.]js[.]min$/
+--ignore-file=match:/[.]min[.]css$/
+--ignore-file=match:/[.]css[.]min$/
+--ignore-file=match:/[.]js[.]map$/
+--ignore-file=match:/[.]css[.]map$/
