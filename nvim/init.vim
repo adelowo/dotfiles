@@ -58,9 +58,9 @@ nmap <F8> :TagbarToggle<CR>
 nmap <Leader><Leader> :NERDTreeToggle<CR>
 nmap <Leader><Leader>. :NERDTreeFocus<CR>
 
-nmap <Leader>t :TestNearest<CR>
-nmap <Leader>tt :TestFile<CR>
-nmap <Leader>ta :TestSuite<CR>
+nmap <Leader>tn :TestNearest<CR>
+nmap <Leader>tf :TestFile<CR>
+nmap <Leader>t :TestSuite<CR>
 nmap <Leader>tl :TestLast<CR>
 nmap <Leader>tv :TestVisit<CR>
 
@@ -135,7 +135,7 @@ let g:deoplete#enable_at_startup = 1
 let g:godo_install_verbose = 1
 let g:go_get_update = 1
 
-nnoremap <Leader>. :call go#godo#Godo()<CR>
+nmap <Leader>. :Godo<CR>
 
 " Runs the phpcbf tool for fixing php files code style
 function! PHPCBFFile() abort
