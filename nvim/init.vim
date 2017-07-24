@@ -51,6 +51,8 @@ nnoremap <Down> :echomsg "disabled.Use j"<CR>
 nnoremap <Left> :echomsg "disabled. Use h"<CR>
 nnoremap <Right> :echomsg "disabled..Use l"<CR>
 
+autocmd BufNewFile,BufReadPost *.MD set filetype=markdown
+
 let mapleader = ","
 
 map - dd
