@@ -14,3 +14,4 @@
 	; Running git bclean would delete the other 4 branches, leaving only the fiend branch.
 	; Run this with caution.
 	bclean = "!git branch | ack --match='  ' | sed 's/^[ *]*//' | sed 's/^/git branch -D /' | zsh"
+	fiend = "!git branch fiend && git checkout fiend"
