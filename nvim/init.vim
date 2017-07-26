@@ -1,4 +1,4 @@
-"" Disable F1 bringing up the help doc every damn time 
+"" Disable F1 bringing up the help doc every damn time
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
@@ -11,11 +11,12 @@ Plug 'Shougo/neocomplcache'        " Dependency for Shougo/neosnippet
 "" General Plugins
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'  
+Plug 'Shougo/neosnippet-snippets'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
@@ -42,6 +43,7 @@ Plug 'jdkanani/vim-material-theme'
 "" Miscellaneous
 Plug 'fszymanski/deoplete-emoji'
 Plug 'adelowo/godo' " Todo viewer for Golang
+Plug 'bronson/vim-trailing-whitespace'
 
 call plug#end()
 
@@ -57,7 +59,7 @@ let mapleader = ","
 
 map - dd
 nmap <F8> :TagbarToggle<CR>
-nmap <Leader><Leader> :NERDTreeToggle<CR>
+nmap <Leader><Leader> :NERDTreeMirrorToggle<CR>
 nmap <Leader><Leader>. :NERDTreeFocus<CR>
 
 nmap <Leader>tn :TestNearest<CR>
@@ -82,11 +84,11 @@ let g:go_disable_autoinstall = 0
 let g:go_auto_type_info = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1  
-let g:go_highlight_methods = 1  
-let g:go_highlight_structs = 1  
-let g:go_highlight_operators = 1  
-let g:go_highlight_build_constraints = 1 
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 let g:go_auto_sameids = 1
 let g:go_fmt_command = "goimports"
 let g:go_addtags_transform = "snakecase"
@@ -119,7 +121,7 @@ endif
 " colorscheme molokai
  syntax enable
  set background=dark
- set t_Co=256 
+ set t_Co=256
  colorscheme PaperColor
  " colorscheme material-theme
 
@@ -148,8 +150,8 @@ function! PHPCBFFile() abort
 
 	:w
 
-	let s:out = system("phpcbf --pattern='psr2' "." ". expand("%")) 
-	
+	let s:out = system("phpcbf --pattern='psr2' "." ". expand("%"))
+
 	:edit! "reload changes to the file
 
 	" TODO(adelowo) If there are errors, write those out to a new window.
@@ -160,21 +162,21 @@ function! PHPCBFFile() abort
 
 	" for line in split(s:out,"\n")
 	" 	if match(line, 'Files that were not fixed due to errors reported during linting before fixing:') != -1
-	" 		let has_errors = 1 
-	" 	end	
+	" 		let has_errors = 1
+	" 	end
 	" endfor
 
-	" if has_errors == 1 
+	" if has_errors == 1
 	" 	setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap winfixheight
 	" 	setlocal cursorline
   	"	setlocal nonumber
   	"	setlocal norelativenumber
   	"	setlocal showbreak=""
 	" 	setlocal modifiable "Since we are trying to write the output to the window
-		
+
 	" 	delete everything first from the buffer
         "	 %delete _
-	
+
         "	 call append(0, s:out)
 
 	"	 $delete _
@@ -184,7 +186,7 @@ function! PHPCBFFile() abort
         "  	It isn't a new file so remove the '[New File]' message line from the command line
         "	 echon
 	" endif
-	
+
 endfunction
 
 au FileType php nmap <Leader>pf :call PHPCBFFile()<CR>

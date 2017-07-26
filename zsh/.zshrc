@@ -5,7 +5,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/adez/.oh-my-zsh
 
-ZSH_THEME="spaceship"
+ZSH_THEME="ys"
 
 ENABLE_CORRECTION="true"
 
