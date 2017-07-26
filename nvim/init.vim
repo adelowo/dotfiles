@@ -54,13 +54,14 @@ nnoremap <Left> :echomsg "disabled. Use h"<CR>
 nnoremap <Right> :echomsg "disabled..Use l"<CR>
 
 autocmd BufNewFile,BufReadPost *.MD set filetype=markdown
+autocmd BufReadPost,BufWrite * :FixWhitespace
+autocmd BufWrite *.php call s:phpcbffile() | syntax on " Force syntax coloring
 
 let mapleader = ","
 
 map - dd
 nmap <F8> :TagbarToggle<CR>
 nmap <Leader><Leader> :NERDTreeMirrorToggle<CR>
-nmap <Leader><Leader>. :NERDTreeFocus<CR>
 
 nmap <Leader>tn :TestNearest<CR>
 nmap <Leader>tf :TestFile<CR>
@@ -142,7 +143,7 @@ let g:go_get_update = 1
 nmap <Leader>. :Godo<CR>
 
 " Runs the phpcbf tool for fixing php files code style
-function! PHPCBFFile() abort
+function! s:phpcbffile() abort
 
 	if !executable("phpcbf")
 		echohl Error | echo "Phpcbf not found.. Install the phpcbf library" | echo None
@@ -188,8 +189,6 @@ function! PHPCBFFile() abort
 	" endif
 
 endfunction
-
-au FileType php nmap <Leader>pf :call PHPCBFFile()<CR>
 
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
