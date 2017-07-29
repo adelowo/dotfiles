@@ -55,7 +55,6 @@ nnoremap <Right> :echomsg "disabled..Use l"<CR>
 
 autocmd BufNewFile,BufReadPost *.MD set filetype=markdown
 autocmd BufReadPost,BufWrite * :FixWhitespace
-autocmd BufWrite *.php call s:phpcbffile() | syntax on " Force syntax coloring
 
 let mapleader = ","
 
@@ -142,8 +141,10 @@ let g:go_get_update = 1
 
 nmap <Leader>. :Godo<CR>
 
+au FileType php nmap <Leader>pf :call PHPCBFFile()<CR>
+
 " Runs the phpcbf tool for fixing php files code style
-function! s:phpcbffile() abort
+function! Phpcbffile() abort
 
 	if !executable("phpcbf")
 		echohl Error | echo "Phpcbf not found.. Install the phpcbf library" | echo None
