@@ -141,7 +141,7 @@ let g:go_get_update = 1
 
 nmap <Leader>. :Godo<CR>
 
-au FileType php nmap <Leader>pf :call PHPCBFFile()<CR>
+au FileType php nmap <Leader>pf :call Phpcbffile()<CR>
 
 " Runs the phpcbf tool for fixing php files code style
 function! Phpcbffile() abort
