@@ -35,6 +35,7 @@ Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' 
 Plug 'plasticboy/vim-markdown'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+Plug 'stephpy/vim-php-cs-fixer'
 
 "" Color schemes
 Plug 'NLKNguyen/papercolor-theme'
@@ -44,6 +45,7 @@ Plug 'jdkanani/vim-material-theme'
 Plug 'fszymanski/deoplete-emoji'
 Plug 'adelowo/godo' " Todo viewer for Golang
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'godlygeek/tabular'
 
 call plug#end()
 
@@ -101,7 +103,7 @@ let g:airline#extensions#ale#enabled = 1
 let NERDTreeShowHidden=1
 let NERDTreeDirArrowExpandable = '▷'
 let NERDTreeDirArrowCollapsible = '▼'
-let NERDTreeIgnore=['\~$', 'node_modules[[dir]]']
+let NERDTreeIgnore=['\~$', 'node_modules[[dir]]', '.phpcd[[dir]]']
 let NERDTreeWinSize=45
 let NERDTreeQuitOnOpen=1
 
@@ -134,62 +136,17 @@ au FileType go nmap <Leader>ga <Plug>(go-alternate-vertical)
 au FileType go nmap <Leader>gi <Plug>(go-info)
 au FileType go nmap <Leader>gat :GoAddTags<CR>
 
+" Ale mappings
+
+nmap <Leader>ap <Plug>(ale_previous)
+nmap <Leader>an <Plug>(ale_next)
+
 let g:deoplete#enable_at_startup = 1
 
 let g:godo_install_verbose = 1
 let g:go_get_update = 1
 
 nmap <Leader>. :Godo<CR>
-
-au FileType php nmap <Leader>pf :call Phpcbffile()<CR>
-
-" Runs the phpcbf tool for fixing php files code style
-function! Phpcbffile() abort
-
-	if !executable("phpcbf")
-		echohl Error | echo "Phpcbf not found.. Install the phpcbf library" | echo None
-	endif
-
-	:w
-
-	let s:out = system("phpcbf --pattern='psr2' "." ". expand("%"))
-
-	:edit! "reload changes to the file
-
-	" TODO(adelowo) If there are errors, write those out to a new window.
-	" The details written should include the file path and the line(s)
-	" affected. This would ease navigating to the specific line easily
-	"
-	" let has_errors = 0
-
-	" for line in split(s:out,"\n")
-	" 	if match(line, 'Files that were not fixed due to errors reported during linting before fixing:') != -1
-	" 		let has_errors = 1
-	" 	end
-	" endfor
-
-	" if has_errors == 1
-	" 	setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap winfixheight
-	" 	setlocal cursorline
-  	"	setlocal nonumber
-  	"	setlocal norelativenumber
-  	"	setlocal showbreak=""
-	" 	setlocal modifiable "Since we are trying to write the output to the window
-
-	" 	delete everything first from the buffer
-        "	 %delete _
-
-        "	 call append(0, s:out)
-
-	"	 $delete _
-
-        "	 setlocal nomodifiable "Make sure the window isn't writable
-
-        "  	It isn't a new file so remove the '[New File]' message line from the command line
-        "	 echon
-	" endif
-
-endfunction
 
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
