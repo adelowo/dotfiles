@@ -26,7 +26,7 @@ Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'janko-m/vim-test'
-
+Plug 'mileszs/ack.vim'
 
 "" Language specific plugins
 
