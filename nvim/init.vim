@@ -27,6 +27,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'janko-m/vim-test'
 Plug 'mileszs/ack.vim'
+Plug 'simnalamburt/vim-mundo'
 
 "" Language specific plugins
 
@@ -147,6 +148,11 @@ let g:godo_install_verbose = 1
 let g:go_get_update = 1
 
 nmap <Leader>. :Godo<CR>
+
+set undofile
+set undodir=~/.undo
+let g:mundo_close_on_revert = 1
+nnoremap <F5> :MundoToggle<CR>
 
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
