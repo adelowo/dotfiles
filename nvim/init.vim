@@ -170,6 +170,13 @@ set foldnestmax=10 "" Preserves sanity
 
 nnoremap <End> :nohlsearch<CR>
 
+" Make sure n and N behave the same way regardless of whether ? or / was used
+" for searching.
+" With this, n always go forward while N goes backwards
+
+nnoremap <expr> n  'Nn'[v:searchforward]
+nnoremap <expr> N  'nN'[v:searchforward]
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
