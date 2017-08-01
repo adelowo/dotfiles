@@ -156,13 +156,19 @@ nmap <Leader>. :Godo<CR>
 set undofile
 set undodir=~/.undo
 let g:mundo_close_on_revert = 1
-nnoremap <F5> :MundoToggle<CR>
+nnoremap <C-z> :MundoToggle<CR>
 
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
-set hls                 "Highlight all matching patterns... Can be annoying sometimes though, I sometimes have to run :set nohls in the editor"
+set hls                 "Highlight all matching patterns...
+set showmatch
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10 "" Preserves sanity
+
+nnoremap <End> :nohlsearch<CR>
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
