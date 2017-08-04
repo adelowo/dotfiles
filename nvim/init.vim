@@ -78,6 +78,9 @@ nmap <Leader>tv :TestVisit<CR>
 " Mimic CTRL-P in sublime text
 nmap <C-p> :Files<CR>
 
+" Show all open tabs..
+nmap <C-t> :W<CR>
+
 filetype plugin indent on
 syntax on
 set number  " What is a code editor without line number ?
