@@ -140,6 +140,7 @@ au FileType go nmap <Leader>gt <Plug>(go-test)
 au FileType go nmap <Leader>ga <Plug>(go-alternate-vertical)
 au FileType go nmap <Leader>gi <Plug>(go-info)
 au FileType go nmap <Leader>gat :GoAddTags<CR>
+au FileType go nmap <Leader>gct <Plug>(go-coverage-toggle)
 
 " Ale mappings
 
