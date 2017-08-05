@@ -3,6 +3,8 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
+set clipboard+=unnamedplus
+
 "" A saner way to save files
 "" <F2> is damn easy to press though
 map <F2> :w<CR>
