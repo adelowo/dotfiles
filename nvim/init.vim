@@ -81,7 +81,7 @@ nmap <Leader>tv :TestVisit<CR>
 nmap <C-p> :Files<CR>
 
 " Show all open tabs..
-nmap <C-t> :W<CR>
+nmap <S-t> :W<CR>
 
 filetype plugin indent on
 syntax on
