@@ -62,6 +62,10 @@ nnoremap <Down> :echomsg "disabled.Use j"<CR>
 nnoremap <Left> :echomsg "disabled. Use h"<CR>
 nnoremap <Right> :echomsg "disabled..Use l"<CR>
 
+if executable('ag')
+	let g:ackprg = 'ag --vimgrep'
+endif
+
 autocmd BufNewFile,BufReadPost *.MD set filetype=markdown
 autocmd BufReadPost,BufWrite * :FixWhitespace
 
