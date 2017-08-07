@@ -71,6 +71,8 @@ autocmd BufReadPost,BufWrite * :FixWhitespace
 
 let mapleader = ","
 
+nnoremap j gj
+nnoremap k gk
 map - dd
 nmap <F8> :TagbarToggle<CR>
 nmap <Leader><Leader> :NERDTreeMirrorToggle<CR>
