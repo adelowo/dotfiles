@@ -36,12 +36,13 @@ fi
 
 
 ## Sometimes my nternet modem comes up as a mass storage device... Here is the fix for that
-alias boom="sudo usb_modeswitch -v 05c6  -p 1000 -V 05c6 -P 1000 -M "5553424312345678000000000000061b000000020000000000000000000000" && sudo wvdial" 
+alias boom="sudo usb_modeswitch -v 05c6  -p 1000 -V 05c6 -P 1000 -M "5553424312345678000000000000061b000000020000000000000000000000" && sudo wvdial"
 
-# Some other useful plugins 
+# Some other useful plugins
 source $HOME/.zsh/bd/bd.zsh
 
 ## Simulate the awesome highlighting and autocompletion of fish shell
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
 source ~/.secrets
