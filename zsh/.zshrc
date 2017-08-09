@@ -46,3 +46,17 @@ source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
 source ~/.secrets
+
+## Open Neovim in a cinch.
+## If a path is given (as in `v path`), it opens the given path. Path can be a file or directory.
+## If none is given (as in `v`), it opens up the current directory.
+v()
+{
+	local toOpen=$1
+
+	if [[ ${#toOpen} -eq 0  ]]; then
+		toOpen="./"
+	fi
+
+	nvim $toOpen
+}
