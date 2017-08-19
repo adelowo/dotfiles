@@ -1,0 +1,6 @@
+snippet     httpfunc
+abbr http.HandlerFunc
+  func ${1:handler}(w http.ResponseWriter, r *http.Request) {
+    defer r.Body.Close()
+    ${0:fmt.Fprintf(w, "Fiends")}
+  }
