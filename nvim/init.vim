@@ -34,6 +34,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'janko-m/vim-test'
 Plug 'mileszs/ack.vim'
 Plug 'simnalamburt/vim-mundo'
+Plug 'jiangmiao/auto-pairs'
 
 "" Language specific plugins
 
