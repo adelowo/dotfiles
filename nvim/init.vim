@@ -47,6 +47,7 @@ Plug 'stephpy/vim-php-cs-fixer'
 "" Color schemes
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'jdkanani/vim-material-theme'
+Plug 'dracula/vim'
 
 "" Miscellaneous
 Plug 'fszymanski/deoplete-emoji'
@@ -140,8 +141,9 @@ endif
  syntax enable
  set background=dark
  set t_Co=256
- colorscheme PaperColor
+ " colorscheme PaperColor
  " colorscheme material-theme
+ colorscheme dracula
 
 "Specific mappings for Go
 au FileType go nmap <Leader>gd <Plug>(go-doc)
@@ -151,7 +153,7 @@ au FileType go nmap <Leader>gt <Plug>(go-test)
 au FileType go nmap <Leader>ga <Plug>(go-alternate-vertical)
 au FileType go nmap <Leader>gi <Plug>(go-info)
 au FileType go nmap <Leader>gat :GoAddTags<CR>
-au FileType go nmap <Leader>gct <Plug>(go-coverage-toggle)
+au FileType go nmap <Leader>gcov <Plug>(go-coverage-toggle)
 
 " Ale mappings
 

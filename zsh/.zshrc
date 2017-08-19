@@ -5,7 +5,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/adez/.oh-my-zsh
 
-ZSH_THEME="ys"
+ZSH_THEME="dracula"
 
 ENABLE_CORRECTION="true"
 
