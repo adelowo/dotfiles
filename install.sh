@@ -21,7 +21,7 @@ rm ~/.zshrc
 rm -rf ~/.config/nvim
 
 ## Create them again but this time linked to this dotfiles
-ln -s "$DOTFILESDIRECTORY/zsh/.zshrc" ~/.zshrc 
+ln -s "$DOTFILESDIRECTORY/zsh/.zshrc" ~/.zshrc
 ln -s "$DOTFILESDIRECTORY/git/.gitignore_global" ~/.gitignore_global
 ln -s "$DOTFILESDIRECTORY/git/.gitconfig" ~/.gitconfig
 ln -s "$DOTFILESDIRECTORY/nvim" ~/.config/nvim
@@ -29,12 +29,13 @@ ln -s "$DOTFILESDIRECTORY/nvim/init.vim" ~/.config/nvim/init.vim
 ln -s "$DOTFILESDIRECTORY/.ackrc" ~/.ackrc
 
 installPackages() {
-	while IFS="=" read -r packageName packageGitURL 
+	while IFS="=" read -r packageName packageGitURL
 	do
 		echo "Installing $packageName"
-		
+
 		git clone "$packageGitURL" "$2/$packageName"
 	done < $1
+	unset IFS
 }
 
 echo "Installing ZSH Packages"
