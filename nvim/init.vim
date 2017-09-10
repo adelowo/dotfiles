@@ -3,6 +3,7 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
+set autoread
 set clipboard+=unnamedplus
 
 "" A saner way to save files
