@@ -55,6 +55,8 @@ Plug 'fszymanski/deoplete-emoji'
 Plug 'adelowo/godo' " Todo viewer for Golang
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'godlygeek/tabular'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
 
 call plug#end()
 
