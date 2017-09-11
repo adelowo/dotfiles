@@ -3,9 +3,9 @@
  export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/bin/go/bin:$HOME/.config/composer/vendor/bin:$GOPATH/bin
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/adez/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
-ZSH_THEME="dracula"
+ZSH_THEME="ys"
 
 ENABLE_CORRECTION="true"
 
