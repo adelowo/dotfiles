@@ -61,12 +61,6 @@ Plug 'xolox/vim-session'
 
 call plug#end()
 
-"GOD mode
-nnoremap <Up> :echomsg "disabled.. Use k"<CR>
-nnoremap <Down> :echomsg "disabled.Use j"<CR>
-nnoremap <Left> :echomsg "disabled. Use h"<CR>
-nnoremap <Right> :echomsg "disabled..Use l"<CR>
-
 if executable('ag')
 	let g:ackprg = 'ag --vimgrep'
 endif
