@@ -5,6 +5,7 @@ vnoremap <F1> <ESC>
 
 set autoread
 set clipboard+=unnamedplus
+set mouse=a
 
 "" A saner way to save files
 "" <F2> is damn easy to press though
