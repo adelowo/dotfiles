@@ -93,6 +93,8 @@ filetype plugin indent on
 syntax on
 set number  " What is a code editor without line number ?
 
+let g:session_autosave = 'no'
+
 let g:vim_markdown_new_list_item_indent = 2
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_no_extensions_in_markdown = 1
