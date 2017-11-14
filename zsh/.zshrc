@@ -1,11 +1,12 @@
- export GOPATH=$HOME/goat
- export GOROOT=/usr/local/bin/go
+ export GOPATH=$HOME/go
+ #export GOROOT=/usr/local/bin/go
  export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/bin/go/bin:$HOME/.config/composer/vendor/bin:$GOPATH/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-ZSH_THEME="ys"
+POWERLEVEL9K_MODE='nerdfonts'
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 ENABLE_CORRECTION="true"
 
@@ -33,10 +34,6 @@ alias ctag="gotags -tag-relative=true -R=true -sort=true -f="tags" -fields=+l ."
 if type nvim > /dev/null 2>&1; then
   alias vim="nvim"
 fi
-
-
-## Sometimes my nternet modem comes up as a mass storage device... Here is the fix for that
-alias boom="sudo usb_modeswitch -v 05c6  -p 1000 -V 05c6 -P 1000 -M "5553424312345678000000000000061b000000020000000000000000000000" && sudo wvdial"
 
 # Some other useful plugins
 source $HOME/.zsh/bd/bd.zsh
