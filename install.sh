@@ -27,6 +27,7 @@ ln -s "$DOTFILESDIRECTORY/git/.gitconfig" ~/.gitconfig
 ln -s "$DOTFILESDIRECTORY/nvim" ~/.config/nvim
 ln -s "$DOTFILESDIRECTORY/nvim/init.vim" ~/.config/nvim/init.vim
 ln -s "$DOTFILESDIRECTORY/.ackrc" ~/.ackrc
+ln -s "$DOTFILESDIRECTORY/.ideavimrc" ~/.ideavimrc
 
 installPackages() {
 	while IFS="=" read -r packageName packageGitURL
