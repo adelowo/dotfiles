@@ -15,7 +15,7 @@ ENABLE_CORRECTION="true"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git z)
+plugins=(git z docker)
 
 source $ZSH/oh-my-zsh.sh
 
