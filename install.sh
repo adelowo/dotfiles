@@ -18,6 +18,7 @@ echo "Creating a symbolic link to the home directory for init.vim and .zshrc"
 
 ## Remove any old .vimrc and .zshrc files
 rm ~/.zshrc
+rm ~/.tmux.conf
 rm -rf ~/.config/nvim
 
 ## Create them again but this time linked to this dotfiles
@@ -28,6 +29,7 @@ ln -s "$DOTFILESDIRECTORY/nvim" ~/.config/nvim
 ln -s "$DOTFILESDIRECTORY/nvim/init.vim" ~/.config/nvim/init.vim
 ln -s "$DOTFILESDIRECTORY/.ackrc" ~/.ackrc
 ln -s "$DOTFILESDIRECTORY/.ideavimrc" ~/.ideavimrc
+ln -s "$DOTFILESDIRECTORY/tmux/.tmux.conf" ~/.tmux.conf
 
 installPackages() {
 	while IFS="=" read -r packageName packageGitURL
