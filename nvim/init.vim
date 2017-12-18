@@ -60,6 +60,9 @@ Plug 'godlygeek/tabular'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
+"" tmux
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
 
 if executable('ag')
@@ -124,6 +127,8 @@ let NERDTreeDirArrowCollapsible = '▼'
 let NERDTreeIgnore=['\~$', 'node_modules[[dir]]', '.phpcd[[dir]]']
 let NERDTreeWinSize=45
 let NERDTreeQuitOnOpen=1
+let NERDTreeMapJumpNextSibling = 0
+let NERDTreeMapJumpPrevSibling = 0
 
 let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
 let g:deoplete#ignore_sources.php = ['omni']
