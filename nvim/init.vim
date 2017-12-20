@@ -59,6 +59,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'godlygeek/tabular'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
+Plug 'roman/golden-ratio'
 
 "" tmux
 Plug 'christoomey/vim-tmux-navigator'
