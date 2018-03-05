@@ -48,6 +48,8 @@ Plug 'plasticboy/vim-markdown'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 Plug 'stephpy/vim-php-cs-fixer'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'elzr/vim-json'
 
 "" Color schemes
 Plug 'NLKNguyen/papercolor-theme'
