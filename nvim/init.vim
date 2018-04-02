@@ -7,7 +7,7 @@ set noswapfile
 
 set autoread
 set clipboard+=unnamedplus
-set mouse=a
+:set mouse=
 
 "" A saner way to save files
 "" <F2> is damn easy to press though
@@ -50,11 +50,13 @@ Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'elzr/vim-json'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 
 "" Color schemes
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'jdkanani/vim-material-theme'
 Plug 'dracula/vim'
+Plug 'trevordmiller/nova-vim'
 
 "" Miscellaneous
 Plug 'fszymanski/deoplete-emoji'
@@ -126,10 +128,19 @@ let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = '⚠'
 let g:airline#extensions#ale#enabled = 1
 
+" let g:ale_fixers = {}
+" let g:ale_fixers['javascript'] = ['prettier']
+
+let g:deoplete#sources#ternjs#filetypes = [
+                \ 'jsx',
+                \ 'javascript.jsx',
+                \ 'vue',
+                \ ]
+
 let NERDTreeShowHidden=1
 let NERDTreeDirArrowExpandable = '▷'
 let NERDTreeDirArrowCollapsible = '▼'
-let NERDTreeIgnore=['\~$', 'node_modules[[dir]]', '.phpcd[[dir]]']
+let NERDTreeIgnore=['\~$', 'node_modules[[dir]]', '.phpcd[[dir]]', '.git[[dir]]']
 let NERDTreeWinSize=45
 let NERDTreeQuitOnOpen=1
 let NERDTreeMapJumpNextSibling = 0
@@ -150,11 +161,12 @@ endif
 
 " colorscheme molokai
  syntax enable
- set background=dark
+ " set background=dark
  set t_Co=256
  " colorscheme PaperColor
  " colorscheme material-theme
- colorscheme dracula
+ " colorscheme dracula
+ colorscheme nova
 
 "Specific mappings for Go
 au FileType go nmap <Leader>gd <Plug>(go-doc)
