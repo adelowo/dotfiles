@@ -66,6 +66,8 @@ Plug 'godlygeek/tabular'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 Plug 'roman/golden-ratio'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'AndrewRadev/splitjoin.vim'
 
 "" tmux
 Plug 'christoomey/vim-tmux-navigator'
