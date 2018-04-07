@@ -161,12 +161,12 @@ endif
 
 " colorscheme molokai
  syntax enable
- " set background=dark
+ set background=dark
  set t_Co=256
  " colorscheme PaperColor
  " colorscheme material-theme
- " colorscheme dracula
- colorscheme nova
+ colorscheme dracula
+ " colorscheme nova
 
 "Specific mappings for Go
 au FileType go nmap <Leader>gd <Plug>(go-doc)
