@@ -48,8 +48,8 @@ Plug 'plasticboy/vim-markdown'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 Plug 'stephpy/vim-php-cs-fixer'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'elzr/vim-json'
+Plug 'ternjs/tern_for_vim', {'build': 'npm install'}
 Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 
 "" Color schemes
@@ -130,8 +130,9 @@ let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = '⚠'
 let g:airline#extensions#ale#enabled = 1
 
-" let g:ale_fixers = {}
-" let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_javascript_prettier_options = "--single-quote --trailing-comma es5 --print-width 80"
 
 let g:deoplete#sources#ternjs#filetypes = [
                 \ 'jsx',
