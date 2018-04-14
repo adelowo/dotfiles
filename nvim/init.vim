@@ -88,6 +88,7 @@ nnoremap k gk
 map - dd
 nmap <F8> :TagbarToggle<CR>
 nmap <Leader><Leader> :NERDTreeMirrorToggle<CR>
+nmap <Leader>cf :NERDTreeFind<CR>
 
 nmap <Leader>tn :TestNearest<CR>
 nmap <Leader>tf :TestFile<CR>
