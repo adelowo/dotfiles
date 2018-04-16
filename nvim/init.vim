@@ -217,6 +217,8 @@ nnoremap <End> :nohlsearch<CR>
 
 nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <expr> N  'nN'[v:searchforward]
+nnoremap <space> zz
+nnoremap <Leader>w :w<CR>
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
