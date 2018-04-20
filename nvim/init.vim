@@ -49,6 +49,7 @@ Plug 'stephpy/vim-php-cs-fixer'
 Plug 'elzr/vim-json'
 Plug 'ternjs/tern_for_vim', {'build': 'npm install'}
 Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
+Plug 'zchee/deoplete-jedi'
 
 "" Color schemes
 Plug 'NLKNguyen/papercolor-theme'
@@ -206,6 +207,7 @@ set showmatch
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10 "" Preserves sanity
+set textwidth=80
 
 nnoremap <End> :nohlsearch<CR>
 
