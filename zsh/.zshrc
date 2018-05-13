@@ -76,5 +76,19 @@ v()
 	nvim $toOpen
 }
 
+
+## Give this an open tcp port and it would return it's PID
+## I use this to kill processes
+## sudo kill -9 $(portpid XYZ)
+portpid()
+{
+	if [[ ${#1} -eq 0 ]] then
+		echo "Provide a port whose PID you'd like to get"
+		return 64
+	fi
+
+	lsof -i tcp:$1 -P | awk '{print $2}' | grep -e "[0-9]"
+}
+
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /Users/lanreadelowo/go/bin/vault vault
