@@ -50,6 +50,8 @@ Plug 'elzr/vim-json'
 Plug 'ternjs/tern_for_vim', {'build': 'npm install'}
 Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 Plug 'zchee/deoplete-jedi'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 "" Color schemes
 Plug 'NLKNguyen/papercolor-theme'
@@ -105,6 +107,7 @@ filetype plugin indent on
 syntax on
 set number  " What is a code editor without line number ?
 
+let g:jsx_ext_required = 0
 let g:session_autosave = 'no'
 
 let g:vim_markdown_new_list_item_indent = 2
@@ -166,9 +169,9 @@ endif
  syntax enable
  set background=dark
  set t_Co=256
- " colorscheme PaperColor
+ colorscheme PaperColor
  " colorscheme material-theme
- colorscheme dracula
+ " colorscheme dracula
  " colorscheme nova
 
 "Specific mappings for Go
