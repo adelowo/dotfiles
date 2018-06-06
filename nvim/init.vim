@@ -51,7 +51,10 @@ Plug 'ternjs/tern_for_vim', {'build': 'npm install'}
 Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 Plug 'zchee/deoplete-jedi'
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim', {'for': ['typescript', 'typescript.tsx']}
+Plug 'ianks/vim-tsx', { 'for': 'typescript.tsx' }
+Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins', 'for': ['typescript', 'typescript.tsx']}
+Plug 'eagletmt/neco-ghc'
 
 "" Color schemes
 Plug 'NLKNguyen/papercolor-theme'
