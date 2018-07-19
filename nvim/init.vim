@@ -61,6 +61,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'jdkanani/vim-material-theme'
 Plug 'dracula/vim'
 Plug 'trevordmiller/nova-vim'
+Plug 'henrynewcomer/vim-theme-papaya'
 
 "" Miscellaneous
 Plug 'fszymanski/deoplete-emoji'
@@ -138,6 +139,7 @@ let g:airline#extensions#ale#enabled = 1
 
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fixers['php'] = ['php_cs_fixer']
 let g:ale_javascript_prettier_options = "--single-quote --trailing-comma es5 --print-width 80"
 
 let g:deoplete#sources#ternjs#filetypes = [
@@ -172,9 +174,10 @@ endif
  syntax enable
  set background=dark
  set t_Co=256
- colorscheme PaperColor
+ " colorscheme PaperColor
+ " colorscheme papaya
  " colorscheme material-theme
- " colorscheme dracula
+ colorscheme dracula
  " colorscheme nova
 
 "Specific mappings for Go
