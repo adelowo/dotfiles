@@ -54,7 +54,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim', {'for': ['typescript', 'typescript.tsx']}
 Plug 'ianks/vim-tsx', { 'for': 'typescript.tsx' }
 Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins', 'for': ['typescript', 'typescript.tsx']}
+Plug 'rust-lang/rust.vim'
 Plug 'eagletmt/neco-ghc'
+Plug 'sebastianmarkow/deoplete-rust'
 
 "" Color schemes
 Plug 'NLKNguyen/papercolor-theme'
@@ -201,6 +203,10 @@ let g:godo_install_verbose = 1
 let g:go_get_update = 1
 
 nmap <Leader>. :Godo<CR>
+
+
+let g:deoplete#sources#rust#racer_binary='/Users/lanreadelowo/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='/Users/lanreadelowo/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/'
 
 set undofile
 set undodir=~/.undo

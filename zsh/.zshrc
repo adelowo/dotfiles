@@ -1,6 +1,7 @@
  export GOPATH=$HOME/go
  #export GOROOT=/usr/local/bin/go
  export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/go/bin:$HOME/.config/composer/vendor/bin:$GOPATH/bin:/usr/local/mysql/bin:$HOME/flutter/bin:Users/${USER}/Library/Android/sdk/platform-tools
+ source $HOME/.cargo/env
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
