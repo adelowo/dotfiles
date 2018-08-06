@@ -1,6 +1,7 @@
 [user]
 	email = yo@lanre.wtf
 	name = Lanre Adelowo
+	signingkey = 41158467DC7A741F
 [push]
 	default = simple
 [core]
@@ -31,3 +32,7 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[commit]
+	gpgsign = true
+[tag]
+	forceSignAnnotated = true
