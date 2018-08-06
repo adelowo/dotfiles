@@ -57,6 +57,8 @@ Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins', 'for': ['typ
 Plug 'rust-lang/rust.vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'sebastianmarkow/deoplete-rust'
+Plug 'zchee/deoplete-clang'
+Plug 'Shougo/neoinclude.vim'
 
 "" Color schemes
 Plug 'NLKNguyen/papercolor-theme'
