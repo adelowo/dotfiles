@@ -6,6 +6,9 @@ source $HOME/.cargo/env
 ## Make sure gpg works
 export GPG_TTY=$(tty)
 
+## Stop random mail messages
+export MAILCHECK=0
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
