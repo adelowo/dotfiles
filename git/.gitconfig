@@ -36,3 +36,5 @@
 	gpgsign = true
 [tag]
 	forceSignAnnotated = true
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/
