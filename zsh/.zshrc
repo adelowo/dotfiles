@@ -1,5 +1,8 @@
- export GOPATH=$HOME/go
  export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/go/bin:$HOME/.config/composer/vendor/bin:$GOPATH/bin:/usr/local/mysql/bin:$HOME/flutter/bin:Users/${USER}/Library/Android/sdk/platform-tools
+
+export PATH="/usr/local/sbin:$PATH"
+export PATH=$HOME/.composer/vendor/bin:$PATH
+
 
 source $HOME/.cargo/env
 
