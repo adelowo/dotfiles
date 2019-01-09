@@ -65,6 +65,8 @@ Plug 'eagletmt/neco-ghc'
 Plug 'sebastianmarkow/deoplete-rust'
 Plug 'tweekmonster/deoplete-clang2'
 Plug 'Shougo/neoinclude.vim'
+Plug 'tpope/vim-rails'
+Plug 'fishbullet/deoplete-ruby'
 
 "" Color schemes
 Plug 'NLKNguyen/papercolor-theme'
@@ -150,6 +152,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fixers['php'] = ['php_cs_fixer']
+let g:ale_fixers['ruby'] = ['rubocop']
 let g:ale_javascript_prettier_options = "--single-quote --trailing-comma es5 --print-width 80"
 
 let g:deoplete#sources#ternjs#filetypes = [
@@ -184,10 +187,10 @@ endif
  syntax enable
  set background=dark
  set t_Co=256
- " colorscheme PaperColor
+ colorscheme PaperColor
  " colorscheme papaya
  " colorscheme material-theme
- colorscheme dracula
+ " colorscheme dracula
  " colorscheme nova
 
 "Specific mappings for Go
