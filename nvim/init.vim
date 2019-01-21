@@ -12,10 +12,10 @@ set clipboard+=unnamedplus
 nnoremap <Leader>w :w<CR>
 
 """ GOD mode
-nnoremap <Up> :echomsg "disabled.. Use k"<CR>
-nnoremap <Down> :echomsg "disabled.Use j"<CR>
-nnoremap <Left> :echomsg "disabled. Use h"<CR>
-nnoremap <Right> :echomsg "disabled..Use l"<CR>
+" nnoremap <Up> :echomsg "disabled.. Use k"<CR>
+" nnoremap <Down> :echomsg "disabled.Use j"<CR>
+" nnoremap <Left> :echomsg "disabled. Use h"<CR>
+" nnoremap <Right> :echomsg "disabled..Use l"<CR>
 
 call plug#begin("~/.config/nvim/plugged")
 
@@ -43,6 +43,7 @@ Plug 'janko-m/vim-test'
 Plug 'mileszs/ack.vim'
 Plug 'simnalamburt/vim-mundo'
 Plug 'jiangmiao/auto-pairs'
+Plug 'dhruvasagar/vim-zoom'
 
 "" Language specific plugins
 
