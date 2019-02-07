@@ -3,6 +3,7 @@
 --ignore-directory=is:.git
 --ignore-directory=is:SCCS
 --ignore-directory=is:node_modules
+--ignore-directory=is:vendor
 
 --ignore-file=ext:bak
 --ignore-file=match:/~$/

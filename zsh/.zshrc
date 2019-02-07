@@ -3,22 +3,34 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/go/bin:$HOME/.config/compo
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/.composer/vendor/bin:$PATH
 
-
 source $HOME/.cargo/env
 
 ## Make sure gpg works
 export GPG_TTY=$(tty)
 
+## Give this an open tcp port and it would return it's PID
+## I usually use this to kill processes
+## sudo kill -9 $(portpid 8080)
+portpid()
+{
+	if [[ ${#1} -eq 0 ]] then
+		echo "Provide a port number whose PID you'd like to get"
+		return 64
+	fi
+
+	lsof -i tcp:$1 -P | awk '{print $2}' | grep -e "[0-9]"
+}
+
 ## Stop random mail messages
 export MAILCHECK=0
 
-# Path to your oh-my-zsh installation.
+## Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
 POWERLEVEL9K_MODE='nerdfonts'
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+## POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%{%F{249}%}\u250f"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%F{249}%}\u2517%{%F{default}%} "
 
@@ -45,14 +57,16 @@ plugins=(git z docker)
 
 source $ZSH/oh-my-zsh.sh
 
+## EDITOR is the default EDITOR used for writing git commit messages.
 export EDITOR="nvim"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-
 alias ctag="gotags -tag-relative=true -R=true -sort=true -f="tags" -fields=+l ."
 
+## Nvim > vim
+## If Nvim is installed, make the command vim to open nvim
 if type nvim > /dev/null 2>&1; then
   alias vim="nvim"
 fi
@@ -64,6 +78,9 @@ source $HOME/.zsh/bd/bd.zsh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
+## Load another bash file regarded as containing secret info.
+## This will usually contain secret keys and all of that.
+## While I want my dotfiles to be on GitHub, this is too sensitive
 source ~/.secrets
 
 ## Open Neovim in a cinch.
@@ -80,22 +97,6 @@ v()
 	nvim $toOpen
 }
 
-
-
-
-
-## Give this an open tcp port and it would return it's PID
-## I use this to kill processes
-## sudo kill -9 $(portpid XYZ)
-portpid()
-{
-	if [[ ${#1} -eq 0 ]] then
-		echo "Provide a port whose PID you'd like to get"
-		return 64
-	fi
-
-	lsof -i tcp:$1 -P | awk '{print $2}' | grep -e "[0-9]"
-}
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /Users/lanreadelowo/go/bin/vault vault
