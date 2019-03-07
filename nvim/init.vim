@@ -64,7 +64,7 @@ Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins', 'for': ['typ
 Plug 'rust-lang/rust.vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'sebastianmarkow/deoplete-rust'
-Plug 'tweekmonster/deoplete-clang2'
+Plug 'zchee/deoplete-clang'
 Plug 'Shougo/neoinclude.vim'
 Plug 'tpope/vim-rails'
 Plug 'fishbullet/deoplete-ruby'
@@ -75,6 +75,10 @@ Plug 'jdkanani/vim-material-theme'
 Plug 'dracula/vim'
 Plug 'trevordmiller/nova-vim'
 Plug 'henrynewcomer/vim-theme-papaya'
+Plug 'sjl/badwolf'
+Plug 'morhetz/gruvbox'
+Plug 'cocopon/iceberg.vim'
+Plug 'sonobre/briofita_vim'
 
 "" Miscellaneous
 Plug 'fszymanski/deoplete-emoji'
@@ -188,7 +192,9 @@ endif
  syntax enable
  set background=dark
  set t_Co=256
- colorscheme PaperColor
+ " colorscheme gruvbox
+ " colorscheme iceberg
+ colorscheme briofita
  " colorscheme papaya
  " colorscheme material-theme
  " colorscheme dracula
