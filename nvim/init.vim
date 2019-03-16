@@ -159,6 +159,9 @@ let g:ale_fixers['php'] = ['php_cs_fixer']
 let g:ale_fixers['ruby'] = ['rubocop']
 let g:ale_fixers['typescript'] = ['prettier', 'tslint']
 let g:ale_javascript_prettier_options = "--single-quote --trailing-comma es5 --print-width 80"
+let g:ale_fixers['css'] = ['prettier']
+
+let g:ale_fix_on_save = 1
 
 let g:deoplete#sources#ternjs#filetypes = [
                 \ 'jsx',
