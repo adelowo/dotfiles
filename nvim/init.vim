@@ -58,10 +58,9 @@ Plug 'ternjs/tern_for_vim', {'build': 'npm install'}
 Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 Plug 'zchee/deoplete-jedi'
 Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim', {'for': ['typescript', 'typescript.tsx']}
-Plug 'ianks/vim-tsx', { 'for': 'typescript.tsx' }
-Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins', 'for': ['typescript', 'typescript.tsx']}
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'rust-lang/rust.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'eagletmt/neco-ghc'
 Plug 'sebastianmarkow/deoplete-rust'
 Plug 'zchee/deoplete-clang'
@@ -158,6 +157,7 @@ let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fixers['php'] = ['php_cs_fixer']
 let g:ale_fixers['ruby'] = ['rubocop']
+let g:ale_fixers['typescript'] = ['prettier', 'tslint']
 let g:ale_javascript_prettier_options = "--single-quote --trailing-comma es5 --print-width 80"
 
 let g:deoplete#sources#ternjs#filetypes = [
