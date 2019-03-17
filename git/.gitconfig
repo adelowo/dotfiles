@@ -3,7 +3,7 @@
 	name = Lanre Adelowo
 	signingkey = 41158467DC7A741F
 [push]
-	default = simple
+	default = current
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore_global
