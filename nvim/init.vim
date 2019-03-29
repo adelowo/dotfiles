@@ -121,6 +121,7 @@ let g:LanguageClient_rootMarkers = {
     \ 'go': ['.git', 'go.mod'],
     \ }
 
+let mapleader = ","
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
@@ -132,8 +133,6 @@ nnoremap <silent> R :call LanguageClient#textDocument_rename()<CR>
 
 autocmd BufNewFile,BufReadPost *.MD set filetype=markdown
 autocmd BufReadPost,BufWrite * :FixWhitespace
-
-let mapleader = ","
 
 nnoremap j gj
 nnoremap k gk
