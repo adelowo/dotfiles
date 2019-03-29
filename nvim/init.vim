@@ -45,6 +45,8 @@ Plug 'simnalamburt/vim-mundo'
 Plug 'jiangmiao/auto-pairs'
 Plug 'dhruvasagar/vim-zoom'
 
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+
 "" Language specific plugins
 
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
@@ -99,6 +101,35 @@ if executable('ag')
 	let g:ackprg = 'ag --vimgrep'
 endif
 
+set omnifunc=syntaxcomplete#Complete
+let g:LanguageClient_useFloatingHover = 1
+let g:LanguageClient_diagnosticsList = 'disabled'
+let g:LanguageClient_useVirtualText = 0
+let g:LanguageClient_useFloatingHover = 1
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'nightly', 'rls'],
+    \ 'go': ['bingo'],
+    \ 'vue': ['vls'],
+    \ 'javascript': ['javascript-typescript-stdio'],
+    \ 'typescript': ['javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['javascript-typescript-stdio'],
+    \ 'python': ['/usr/local/bin/pyls'],
+    \ 'dart': ['dart_language_server'],
+    \ }
+
+let g:LanguageClient_rootMarkers = {
+    \ 'go': ['.git', 'go.mod'],
+    \ }
+
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> gv :call LanguageClient#textDocument_definition({'gotoCmd': 'vsplit'})<CR>
+nnoremap <silent> <Leader>gi :call LanguageClient#textDocument_implementation()<CR>
+nnoremap <silent> <Leader>gr :call LanguageClient#textDocument_references()<CR>
+nnoremap <silent> R :call LanguageClient#textDocument_rename()<CR>
+
 autocmd BufNewFile,BufReadPost *.MD set filetype=markdown
 autocmd BufReadPost,BufWrite * :FixWhitespace
 
@@ -148,6 +179,7 @@ let g:go_auto_sameids = 1
 let g:go_fmt_command = "goimports"
 let g:go_addtags_transform = "snakecase"
 let g:go_snippet_engine = "neosnippet"
+let g:go_doc_keywordprg_enabled = 0
 
 let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = '⚠'
@@ -195,21 +227,18 @@ endif
  syntax enable
  set background=dark
  set t_Co=256
- " colorscheme gruvbox
+ colorscheme gruvbox
  " colorscheme iceberg
- colorscheme briofita
+ " colorscheme briofita
  " colorscheme papaya
  " colorscheme material-theme
  " colorscheme dracula
  " colorscheme nova
 
 "Specific mappings for Go
-au FileType go nmap <Leader>gd <Plug>(go-doc)
-au FileType go nmap <Leader>gr <Plug>(go-run)
 au FileType go nmap <Leader>gb <Plug>(go-build)
 au FileType go nmap <Leader>gt <Plug>(go-test)
 au FileType go nmap <Leader>ga <Plug>(go-alternate-vertical)
-au FileType go nmap <Leader>gi <Plug>(go-info)
 au FileType go nmap <Leader>gat :GoAddTags<CR>
 au FileType go nmap <Leader>gcov <Plug>(go-coverage-toggle)
 
