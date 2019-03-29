@@ -1,26 +1,15 @@
+let mapleader = ","
+
 "" Disable F1 bringing up the help doc every damn time
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
-set noswapfile
-
-set autoread
-set clipboard+=unnamedplus
-:set mouse=
-
-nnoremap <Leader>w :w<CR>
-
-""" GOD mode
-nnoremap <Up> :echomsg "disabled.. Use k"<CR>
-nnoremap <Down> :echomsg "disabled.Use j"<CR>
-nnoremap <Left> :echomsg "disabled. Use h"<CR>
-nnoremap <Right> :echomsg "disabled..Use l"<CR>
+"{{{ PLUGINS
 
 call plug#begin("~/.config/nvim/plugged")
 
-"" General Plugins
-Plug 'Shougo/neocomplcache'        " Dependency for Shougo/neosnippet
+Plug 'Shougo/neocomplcache'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'ncm2/ncm2'
@@ -47,11 +36,9 @@ Plug 'mileszs/ack.vim'
 Plug 'simnalamburt/vim-mundo'
 Plug 'jiangmiao/auto-pairs'
 Plug 'dhruvasagar/vim-zoom'
+Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
-
-"" Language specific plugins
-
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'plasticboy/vim-markdown'
@@ -59,19 +46,14 @@ Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'elzr/vim-json'
 Plug 'ternjs/tern_for_vim', {'build': 'npm install'}
-Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'eagletmt/neco-ghc'
-Plug 'sebastianmarkow/deoplete-rust'
-Plug 'zchee/deoplete-clang'
 Plug 'Shougo/neoinclude.vim'
 Plug 'tpope/vim-rails'
-Plug 'fishbullet/deoplete-ruby'
 
-"" Color schemes
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'jdkanani/vim-material-theme'
 Plug 'dracula/vim'
@@ -82,9 +64,7 @@ Plug 'morhetz/gruvbox'
 Plug 'cocopon/iceberg.vim'
 Plug 'sonobre/briofita_vim'
 
-"" Miscellaneous
-Plug 'fszymanski/deoplete-emoji'
-Plug 'adelowo/godo' " Todo viewer for Golang
+Plug 'adelowo/godo'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'godlygeek/tabular'
 Plug 'xolox/vim-misc'
@@ -93,19 +73,55 @@ Plug 'roman/golden-ratio'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 
-"" tmux
-Plug 'christoomey/vim-tmux-navigator'
-
 call plug#end()
+
+"}}}
+
+set noswapfile
+set autoread
+set clipboard+=unnamedplus
+set mouse=
+set history=50
+set ruler
+set showcmd
+set incsearch
+set hls
+filetype plugin indent on
+syntax on
+set number
+set showmatch
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10 "" Preserves sanity
+set textwidth=80
+
+"{{{ Mundo
+
+set undofile
+set undodir=~/.undo
+let g:mundo_close_on_revert = 1
+nnoremap <C-z> :MundoToggle<CR>
+nnoremap <Leader>w :w<CR>
+
+"}}}
+
+""" GOD mode
+nnoremap <Up> :echomsg "disabled.. Use k"<CR>
+nnoremap <Down> :echomsg "disabled.Use j"<CR>
+nnoremap <Left> :echomsg "disabled. Use h"<CR>
+nnoremap <Right> :echomsg "disabled..Use l"<CR>
 
 if executable('ag')
 	let g:ackprg = 'ag --vimgrep'
 endif
 
+
+"{{{ LSP
+
 autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
-
 set omnifunc=syntaxcomplete#Complete
+
 let g:LanguageClient_useFloatingHover = 1
 let g:LanguageClient_diagnosticsList = 'disabled'
 let g:LanguageClient_useVirtualText = 0
@@ -113,7 +129,6 @@ let g:LanguageClient_useFloatingHover = 1
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'nightly', 'rls'],
     \ 'go': ['bingo'],
-    \ 'vue': ['vls'],
     \ 'javascript': ['javascript-typescript-stdio'],
     \ 'typescript': ['javascript-typescript-stdio'],
     \ 'javascript.jsx': ['javascript-typescript-stdio'],
@@ -125,8 +140,6 @@ let g:LanguageClient_rootMarkers = {
     \ 'go': ['.git', 'go.mod'],
     \ }
 
-let mapleader = ","
-
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
@@ -134,6 +147,8 @@ nnoremap <silent> gv :call LanguageClient#textDocument_definition({'gotoCmd': 'v
 nnoremap <silent> <Leader>gi :call LanguageClient#textDocument_implementation()<CR>
 nnoremap <silent> <Leader>gr :call LanguageClient#textDocument_references()<CR>
 nnoremap <silent> R :call LanguageClient#textDocument_rename()<CR>
+
+"}}}
 
 autocmd BufNewFile,BufReadPost *.MD set filetype=markdown
 autocmd BufReadPost,BufWrite * :FixWhitespace
@@ -152,23 +167,22 @@ nmap <Leader>t :TestSuite<CR>
 nmap <Leader>tl :TestLast<CR>
 nmap <Leader>tv :TestVisit<CR>
 
-" Mimic CTRL-P in sublime text
 nmap <C-p> :Files<CR>
-
-" Show all open tabs..
 nmap <S-t> :W<CR>
-
-filetype plugin indent on
-syntax on
-set number  " What is a code editor without line number ?
 
 let g:jsx_ext_required = 0
 let g:session_autosave = 'no'
+
+"{{{ vim-markdown
 
 let g:vim_markdown_new_list_item_indent = 2
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_no_extensions_in_markdown = 1
 let g:vim_markdown_autowrite = 1
+
+"}}}
+
+"{{{ Vim-go
 
 let g:go_disable_autoinstall = 0
 let g:go_auto_type_info = 1
@@ -185,6 +199,21 @@ let g:go_addtags_transform = "snakecase"
 let g:go_snippet_engine = "neosnippet"
 let g:go_doc_keywordprg_enabled = 0
 
+augroup filetype_go
+  au FileType go nmap <Leader>gb <Plug>(go-build)
+  au FileType go nmap <Leader>gt <Plug>(go-test)
+  au FileType go nmap <Leader>ga <Plug>(go-alternate-vertical)
+  au FileType go nmap <Leader>gat :GoAddTags<CR>
+  au FileType go nmap <Leader>gcov <Plug>(go-coverage-toggle)
+augroup end
+
+"}}}
+
+
+"{{{ ALE
+
+nmap <Leader>ap <Plug>(ale_previous)
+nmap <Leader>an <Plug>(ale_next)
 let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = '⚠'
 let g:airline#extensions#ale#enabled = 1
@@ -199,11 +228,9 @@ let g:ale_fixers['css'] = ['prettier']
 
 let g:ale_fix_on_save = 1
 
-let g:deoplete#sources#ternjs#filetypes = [
-                \ 'jsx',
-                \ 'javascript.jsx',
-                \ 'vue',
-                \ ]
+"}}}
+
+"{{{ Nerd-Tree
 
 let NERDTreeShowHidden=1
 let NERDTreeDirArrowExpandable = '▷'
@@ -214,86 +241,50 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeMapJumpNextSibling = 0
 let NERDTreeMapJumpPrevSibling = 0
 
-let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-let g:deoplete#ignore_sources.php = ['omni']
+"}}}
+
+"{{{ Godo
+
+let g:godo_install_verbose = 1
+let g:go_get_update = 1
+nmap <Leader>. :Godo<CR>
+
+"}}}
 
 autocmd FileType php setlocal omnifunc=phpcd#CompletePHP
+
+"{{{ neosnippet
 
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
+"}}}
+
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
 
+syntax enable
+set background=dark
+set t_Co=256
+colorscheme gruvbox
 " colorscheme molokai
- syntax enable
- set background=dark
- set t_Co=256
- colorscheme gruvbox
- " colorscheme iceberg
- " colorscheme briofita
- " colorscheme papaya
- " colorscheme material-theme
- " colorscheme dracula
- " colorscheme nova
-
-"Specific mappings for Go
-au FileType go nmap <Leader>gb <Plug>(go-build)
-au FileType go nmap <Leader>gt <Plug>(go-test)
-au FileType go nmap <Leader>ga <Plug>(go-alternate-vertical)
-au FileType go nmap <Leader>gat :GoAddTags<CR>
-au FileType go nmap <Leader>gcov <Plug>(go-coverage-toggle)
-
-" Ale mappings
-
-nmap <Leader>ap <Plug>(ale_previous)
-nmap <Leader>an <Plug>(ale_next)
-
-let g:deoplete#enable_at_startup = 1
-
-let g:godo_install_verbose = 1
-let g:go_get_update = 1
-
-nmap <Leader>. :Godo<CR>
-
-
-let g:deoplete#sources#rust#racer_binary='/Users/lanreadelowo/.cargo/bin/racer'
-let g:deoplete#sources#rust#rust_source_path='/Users/lanreadelowo/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/'
-
-set undofile
-set undodir=~/.undo
-let g:mundo_close_on_revert = 1
-nnoremap <C-z> :MundoToggle<CR>
-
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-set hls                 "Highlight all matching patterns...
-set showmatch
-set foldenable
-set foldlevelstart=10
-set foldnestmax=10 "" Preserves sanity
-set textwidth=80
+" colorscheme iceberg
+" colorscheme briofita
+" colorscheme papaya
+" colorscheme material-theme
+" colorscheme dracula
+" colorscheme nova
 
 nnoremap <End> :nohlsearch<CR>
 
 " Make sure n and N behave the same way regardless of whether ? or / was used
 " for searching.
 " With this, n always go forward while N goes backwards
-
 nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <expr> N  'nN'[v:searchforward]
 nnoremap <space> zz
-
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
-endif
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
