@@ -19,13 +19,16 @@ nnoremap <Right> :echomsg "disabled..Use l"<CR>
 
 call plug#begin("~/.config/nvim/plugged")
 
-" Dependencies
-Plug 'Shougo/neocomplcache'        " Dependency for Shougo/neosnippet
-
 "" General Plugins
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neocomplcache'        " Dependency for Shougo/neosnippet
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'ncm2/ncm2'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-neosnippet'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'junegunn/goyo.vim'
@@ -52,13 +55,11 @@ Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.s
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'plasticboy/vim-markdown'
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'elzr/vim-json'
 Plug 'ternjs/tern_for_vim', {'build': 'npm install'}
 Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
-Plug 'zchee/deoplete-jedi'
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'rust-lang/rust.vim'
@@ -100,6 +101,9 @@ call plug#end()
 if executable('ag')
 	let g:ackprg = 'ag --vimgrep'
 endif
+
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
 
 set omnifunc=syntaxcomplete#Complete
 let g:LanguageClient_useFloatingHover = 1
