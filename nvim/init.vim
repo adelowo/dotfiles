@@ -63,6 +63,7 @@ Plug 'sjl/badwolf'
 Plug 'morhetz/gruvbox'
 Plug 'cocopon/iceberg.vim'
 Plug 'sonobre/briofita_vim'
+Plug 'mhartington/oceanic-next'
 
 Plug 'adelowo/godo'
 Plug 'bronson/vim-trailing-whitespace'
@@ -278,7 +279,11 @@ endif
 syntax enable
 set background=dark
 set t_Co=256
-colorscheme gruvbox
+" colorscheme gruvbox
+let g:airline_theme='oceanicnext'
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+colorscheme OceanicNext
 " colorscheme molokai
 " colorscheme iceberg
 " colorscheme briofita
