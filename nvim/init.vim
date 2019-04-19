@@ -129,7 +129,7 @@ let g:LanguageClient_useVirtualText = 0
 let g:LanguageClient_useFloatingHover = 1
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'nightly', 'rls'],
-    \ 'go': ['gopls'],
+    \ 'go': ['bingo'],
     \ 'javascript': ['javascript-typescript-stdio'],
     \ 'typescript': ['javascript-typescript-stdio'],
     \ 'javascript.jsx': ['javascript-typescript-stdio'],
