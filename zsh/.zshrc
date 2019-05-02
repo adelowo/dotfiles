@@ -30,7 +30,7 @@ export MAILCHECK=0
 ## Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-POWERLEVEL9K_MODE='nerdfonts'
+POWERLEVEL9K_MODE='nerdfonts-complete'
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 ## POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -50,6 +50,8 @@ POWERLEVEL9K_BATTERY_DISCONNECTED='yellow'
 POWERLEVEL9K_BATTERY_LOW_THRESHOLD='10'
 POWERLEVEL9K_BATTERY_LOW_COLOR='red'
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M \uE868  %d.%m.%y}"
+
+source  ~/powerlevel9k/powerlevel9k.zsh-theme
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
