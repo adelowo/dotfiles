@@ -258,9 +258,9 @@ autocmd FileType php setlocal omnifunc=phpcd#CompletePHP
 
 "{{{ neosnippet
 
-imap <C-w>     <Plug>(neosnippet_expand_or_jump)
-smap <C-w>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-w>     <Plug>(neosnippet_expand_target)
+imap <C-e>     <Plug>(neosnippet_expand_or_jump)
+smap <C-e>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-e>     <Plug>(neosnippet_expand_target)
 
 imap <expr><TAB>
  \ pumvisible() ? "\<C-n>" :
