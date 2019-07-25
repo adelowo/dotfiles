@@ -64,6 +64,8 @@ Plug 'morhetz/gruvbox'
 Plug 'cocopon/iceberg.vim'
 Plug 'sonobre/briofita_vim'
 Plug 'mhartington/oceanic-next'
+Plug 'whatyouhide/vim-gotham'
+Plug 'joshdick/onedark.vim'
 
 Plug 'adelowo/godo'
 Plug 'bronson/vim-trailing-whitespace'
@@ -77,6 +79,8 @@ Plug 'AndrewRadev/splitjoin.vim'
 call plug#end()
 
 "}}}
+
+set hidden
 
 set noswapfile
 set autoread
@@ -283,7 +287,10 @@ set t_Co=256
 let g:airline_theme='oceanicnext'
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
-colorscheme OceanicNext
+let g:onedark_hide_endofbuffer = 1
+" colorscheme OceanicNext
+" colorscheme gotham
+colorscheme onedark
 " colorscheme molokai
 " colorscheme iceberg
 " colorscheme briofita
@@ -350,4 +357,5 @@ if has('langmap') && exists('+langnoremap')
   " mapping.  If unset (default), this may break plugins (but it's backward
   " compatible).
   set langnoremap
+" C
 endif
