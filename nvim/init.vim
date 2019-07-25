@@ -187,7 +187,7 @@ let g:vim_markdown_autowrite = 1
 "{{{ Vim-go
 
 let g:go_disable_autoinstall = 0
-let g:go_auto_type_info = 1
+let g:go_auto_type_info = 0
 let g:go_highlight_fields = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
