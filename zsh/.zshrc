@@ -53,6 +53,8 @@ POWERLEVEL9K_TIME_FORMAT="%D{%H:%M \uE868  %d.%m.%y}"
 
 source  ~/powerlevel9k/powerlevel9k.zsh-theme
 
+export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
+
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
