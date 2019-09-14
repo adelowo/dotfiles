@@ -111,10 +111,10 @@ nnoremap <Leader>w :w<CR>
 "}}}
 
 """ GOD mode
-nnoremap <Up> :echomsg "disabled.. Use k"<CR>
-nnoremap <Down> :echomsg "disabled.Use j"<CR>
-nnoremap <Left> :echomsg "disabled. Use h"<CR>
-nnoremap <Right> :echomsg "disabled..Use l"<CR>
+" nnoremap <Up> :echomsg "disabled.. Use k"<CR>
+" nnoremap <Down> :echomsg "disabled.Use j"<CR>
+" nnoremap <Left> :echomsg "disabled. Use h"<CR>
+" nnoremap <Right> :echomsg "disabled..Use l"<CR>
 
 if executable('ag')
 	let g:ackprg = 'ag --vimgrep'
@@ -133,7 +133,7 @@ let g:LanguageClient_useVirtualText = 0
 let g:LanguageClient_useFloatingHover = 1
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'nightly', 'rls'],
-    \ 'go': ['bingo'],
+    \ 'go': ['gopls'],
     \ 'javascript': ['javascript-typescript-stdio'],
     \ 'typescript': ['javascript-typescript-stdio'],
     \ 'javascript.jsx': ['javascript-typescript-stdio'],
@@ -190,6 +190,8 @@ let g:vim_markdown_autowrite = 1
 
 "{{{ Vim-go
 
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 let g:go_disable_autoinstall = 0
 let g:go_auto_type_info = 0
 let g:go_highlight_fields = 1
@@ -232,6 +234,7 @@ let g:ale_fixers['ruby'] = ['rubocop']
 let g:ale_fixers['typescript'] = ['prettier', 'tslint']
 let g:ale_javascript_prettier_options = "--single-quote --trailing-comma es5 --print-width 80"
 let g:ale_fixers['css'] = ['prettier']
+" let g:ale_fixers['go'] = ['gopls']
 
 let g:ale_fix_on_save = 1
 
@@ -284,6 +287,7 @@ syntax enable
 set background=dark
 set t_Co=256
 " colorscheme gruvbox
+let g:airline_theme='onedark'
 let g:airline_theme='oceanicnext'
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
