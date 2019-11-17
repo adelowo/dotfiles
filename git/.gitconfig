@@ -9,6 +9,7 @@
 	excludesfile = ~/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	quotepath = false
+	commitGraph = true
 [alias]
 	prune = "fetch --prune"
         authors = "!git shortlog -s | cut -c8-"
@@ -40,3 +41,5 @@
 	insteadOf = https://bitbucket.org/
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[gc]
+	writeCommitGraph = true
