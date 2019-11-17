@@ -44,6 +44,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'elzr/vim-json'
+Plug 'dense-analysis/ale'
 Plug 'ternjs/tern_for_vim', {'build': 'npm install'}
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
