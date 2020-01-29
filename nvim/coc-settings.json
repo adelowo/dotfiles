@@ -1,0 +1,15 @@
+
+{
+  "diagnostic.warningSign": "⚠️",
+  "diagnostic.errorSign": "❌",
+  "diagnostic.hintSign": "⚠️",
+  "diagnostic.infoSign": "⚠️",
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    }
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "javascript", "html", "scss"]
+}
