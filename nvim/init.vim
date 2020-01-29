@@ -216,6 +216,7 @@ let g:vim_markdown_autowrite = 1
 
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
+let g:go_rename_command='gopls'
 let g:go_disable_autoinstall = 0
 let g:go_auto_type_info = 1
 let g:go_highlight_fields = 1
