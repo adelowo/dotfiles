@@ -74,6 +74,8 @@ Plug 'roman/golden-ratio'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 
+Plug 'wakatime/vim-wakatime'
+
 call plug#end()
 
 "}}}
