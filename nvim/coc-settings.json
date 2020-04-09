@@ -11,5 +11,5 @@
       "filetypes": ["go"]
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "javascript", "html", "scss"]
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "html", "scss"]
 }

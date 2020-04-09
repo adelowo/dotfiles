@@ -134,6 +134,11 @@ inoremap <silent><expr> <Tab>
 
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+autocmd BufReadPost,BufWrite *.js :Prettier
+autocmd BufReadPost,BufWrite *.ts :Prettier
+
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
