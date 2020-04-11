@@ -237,6 +237,7 @@ let g:go_auto_sameids = 1
 let g:go_fmt_command = "goimports"
 let g:go_addtags_transform = "snakecase"
 let g:go_snippet_engine = "neosnippet"
+let g:go_echo_go_info = 0
 let g:go_doc_keywordprg_enabled = 0
 
 augroup filetype_go
