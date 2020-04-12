@@ -36,6 +36,7 @@ Plug 'simnalamburt/vim-mundo'
 Plug 'jiangmiao/auto-pairs'
 Plug 'dhruvasagar/vim-zoom'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'vimwiki/vimwiki'
 
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'plasticboy/vim-markdown'
