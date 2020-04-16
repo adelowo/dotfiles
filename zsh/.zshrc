@@ -142,3 +142,12 @@ fh() {
   eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
 }
 
+
+# Cannot remember where I got this from sadly. Probably Stackoverflow or Unix
+# Stackexhange
+work_on_project() {
+    sleep $(echo "$1 * 60" | bc)
+
+    for x in $(seq 1000); do say "Time to stop working fella"; sleep 0.5; done
+}
+
