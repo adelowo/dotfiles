@@ -30,6 +30,7 @@ ln -s "$DOTFILESDIRECTORY/nvim/init.vim" ~/.config/nvim/init.vim
 ln -s "$DOTFILESDIRECTORY/.ackrc" ~/.ackrc
 ln -s "$DOTFILESDIRECTORY/.ideavimrc" ~/.ideavimrc
 ln -s "$DOTFILESDIRECTORY/tmux/.tmux.conf" ~/.tmux.conf
+ln -s "$DOTFILESDIRECTORY/.p10k.zsh" ~/.p10k.zsh
 
 installPackages() {
 	while IFS="=" read -r packageName packageGitURL
