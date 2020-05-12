@@ -248,6 +248,7 @@ augroup filetype_go
   au FileType go nmap <Leader>gat :GoAddTags<CR>
   au FileType go nmap <Leader>gcov <Plug>(go-coverage-toggle)
   au FileType go nmap R <Plug>(go-rename)
+  au FileType go nmap <F12> :GoDecls<CR>
 augroup end
 
 "}}}
