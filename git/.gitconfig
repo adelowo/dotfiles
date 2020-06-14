@@ -10,7 +10,7 @@
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	quotepath = false
 	commitGraph = true
-	autocrlf=input
+	autocrlf = input
 [alias]
 	prune = "fetch --prune"
         authors = "!git shortlog -s | cut -c8-"
