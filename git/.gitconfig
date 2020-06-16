@@ -11,6 +11,7 @@
 	quotepath = false
 	commitGraph = true
 	autocrlf = input
+	safecrlf = false
 [alias]
 	prune = "fetch --prune"
         authors = "!git shortlog -s | cut -c8-"
