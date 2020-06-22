@@ -85,7 +85,7 @@ if type nvim > /dev/null 2>&1; then
   alias vim="nvim"
 fi
 
-if type bat > /dev/null > 2&1; then
+if type bat > /dev/null 2>&1; then
   alias cat="bat"
 fi
 
@@ -165,4 +165,3 @@ work_on_project() {
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
