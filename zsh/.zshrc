@@ -85,6 +85,10 @@ if type nvim > /dev/null 2>&1; then
   alias vim="nvim"
 fi
 
+if type bat > /dev/null > 2&1; then
+  alias cat="bat"
+fi
+
 # Some other useful plugins
 source $HOME/.zsh/bd/bd.zsh
 
