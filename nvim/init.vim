@@ -48,7 +48,6 @@ Plug 'ternjs/tern_for_vim', {'build': 'npm install'}
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'rust-lang/rust.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'eagletmt/neco-ghc'
 Plug 'Shougo/neoinclude.vim'
 Plug 'tpope/vim-rails'
