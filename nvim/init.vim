@@ -37,6 +37,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'dhruvasagar/vim-zoom'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vimwiki/vimwiki'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'plasticboy/vim-markdown'
@@ -193,7 +194,6 @@ autocmd BufReadPost,BufWrite * :FixWhitespace
 nnoremap j gj
 nnoremap k gk
 map - dd
-nmap <F8> :TagbarToggle<CR>
 nmap <Leader><Leader> :NERDTreeMirrorToggle<CR>
 nmap <Leader>cf :NERDTreeFind<CR>
 nmap <Leader>q :q<CR>
