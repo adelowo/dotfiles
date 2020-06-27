@@ -64,6 +64,7 @@ Plug 'sonobre/briofita_vim'
 Plug 'mhartington/oceanic-next'
 Plug 'whatyouhide/vim-gotham'
 Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
 
 Plug 'adelowo/godo'
 Plug 'bronson/vim-trailing-whitespace'
@@ -334,7 +335,8 @@ let g:onedark_hide_endofbuffer = 1
 " colorscheme briofita
 " colorscheme papaya
 " colorscheme material-theme
-colorscheme dracula
+" colorscheme dracula
+colorscheme nord
 " colorscheme nova
 " colorscheme gruvbox
 "
