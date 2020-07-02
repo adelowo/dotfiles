@@ -1,3 +1,4 @@
+export TERM="xterm-256color"
 export LANG="en_US.UTF-8"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
