@@ -335,8 +335,8 @@ let g:onedark_hide_endofbuffer = 1
 " colorscheme briofita
 " colorscheme papaya
 " colorscheme material-theme
-" colorscheme dracula
-colorscheme nord
+colorscheme dracula
+" colorscheme nord
 " colorscheme nova
 " colorscheme gruvbox
 "
