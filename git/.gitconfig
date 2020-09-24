@@ -45,3 +45,5 @@
 	insteadOf = https://github.com/
 [gc]
 	writeCommitGraph = true
+[http]
+	cookiefile = /Users/lanreadelowo/.gitcookies
