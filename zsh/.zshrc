@@ -16,6 +16,11 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/go/bin:$HOME/.config/compo
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 source $HOME/.cargo/env
 
