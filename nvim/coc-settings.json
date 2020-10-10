@@ -11,6 +11,6 @@
       "filetypes": ["go"]
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "html", "scss"],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "html", "scss","js"],
   "tsserver.npm": "/usr/local/bin/npm"
 }
