@@ -175,3 +175,10 @@ source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/.go.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/lanreadelowo/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lanreadelowo/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/lanreadelowo/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lanreadelowo/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/Users/lanreadelowo/.deta/bin:$PATH"

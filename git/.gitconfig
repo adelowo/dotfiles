@@ -47,3 +47,7 @@
 	writeCommitGraph = true
 [http]
 	cookiefile = /Users/lanreadelowo/.gitcookies
+[receive]
+	advertisePushOptions = true
+[gpg]
+	program = /usr/local/bin/gpg
