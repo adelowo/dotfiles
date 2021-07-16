@@ -122,6 +122,10 @@ if executable('ag')
 	let g:ackprg = 'ag --vimgrep'
 endif
 
+" soft ruler at 100
+:set colorcolumn=100
+:hi ColorColumn ctermbg=lightcyan guibg=blue
+
 "" {{{ COC
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
