@@ -182,3 +182,4 @@ if [ -f '/Users/lanreadelowo/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/lanreadelowo/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lanreadelowo/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/Users/lanreadelowo/.deta/bin:$PATH"
+

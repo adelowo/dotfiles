@@ -327,7 +327,7 @@ let g:airline_theme='oceanicnext'
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
 let g:onedark_hide_endofbuffer = 1
-" colorscheme OceanicNext
+colorscheme OceanicNext
 " colorscheme gotham
 " colorscheme onedark
 " colorscheme molokai
@@ -335,7 +335,7 @@ let g:onedark_hide_endofbuffer = 1
 " colorscheme briofita
 " colorscheme papaya
 " colorscheme material-theme
-colorscheme dracula
+" colorscheme dracula
 " colorscheme nord
 " colorscheme nova
 " colorscheme gruvbox
