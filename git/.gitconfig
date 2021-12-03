@@ -1,7 +1,7 @@
 [user]
 	email = yo@lanre.wtf
 	name = Lanre Adelowo
-	signingkey = 8157CBB18103A09A
+	signingkey = 17587ED6D8AD34DC6AEDB1265F48B4357241D209
 [push]
 	default = current
 [core]
@@ -50,4 +50,4 @@
 [receive]
 	advertisePushOptions = true
 [gpg]
-	program = /usr/local/bin/gpg
+	program = gpg
