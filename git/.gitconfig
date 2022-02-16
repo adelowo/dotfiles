@@ -43,6 +43,7 @@
 	insteadOf = https://bitbucket.org/
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+	insteadOf = https://github.com/
 [gc]
 	writeCommitGraph = true
 [http]

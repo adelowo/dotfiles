@@ -123,7 +123,7 @@ if executable('ag')
 endif
 
 " soft ruler at 100
-:set colorcolumn=100
+:set colorcolumn=200
 :hi ColorColumn ctermbg=lightcyan guibg=blue
 
 "" {{{ COC

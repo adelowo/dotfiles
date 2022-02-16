@@ -1,4 +1,3 @@
-
 {
   "diagnostic.warningSign": "⚠️",
   "diagnostic.errorSign": "❌",
@@ -7,10 +6,36 @@
   "languageserver": {
     "golang": {
       "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
+      "rootPatterns": [
+        "go.mod",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "filetypes": [
+        "go"
+      ]
+    },
+    "solidity": {
+      "command": "/path/to/solc",
+      "args": [
+        "--lsp"
+      ],
+      "trace.server": "verbose",
+      "rootPatterns": [
+        ".git/"
+      ],
+      "filetypes": [
+        "solidity"
+      ]
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "html", "scss","js"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "Markdown",
+    "html",
+    "scss",
+    "js"
+  ],
   "tsserver.npm": "/usr/local/bin/npm"
 }

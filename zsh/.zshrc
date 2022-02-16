@@ -1,5 +1,9 @@
 export TERM="xterm-256color"
 export LANG="en_US.UTF-8"
+if [ -z "$TMUX" ]; then
+  exec tmux new-session -A -s workspace
+fi
+export ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -9,10 +13,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Default to tmux all the time
-if [ -z $TMUX ]; then; tmux; fi
+# if [ -z $TMUX ]; then; tmux; fi
 
 export GOPATH=$HOME/go
 export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/go/bin:$HOME/.config/composer/vendor/bin:$GOPATH/bin:/usr/local/mysql/bin:$HOME/flutter/bin:Users/${USER}/Library/Android/sdk/platform-tools
+export PATH=/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.0.0/bin:$PATH
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH="/usr/local/opt/ruby/bin:$PATH"
@@ -22,7 +27,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-source $HOME/.cargo/env
+# source $HOME/.cargo/env
 
 ## Make sure gpg works
 export GPG_TTY=$(tty)
@@ -67,7 +72,7 @@ POWERLEVEL10K_BATTERY_LOW_THRESHOLD='10'
 POWERLEVEL10K_BATTERY_LOW_COLOR='red'
 POWERLEVEL10K_TIME_FORMAT="%D{%H:%M \uE868  %d.%m.%y}"
 
-source  ~/powerlevel9k/powerlevel9k.zsh-theme
+# source  ~/powerlevel9k/powerlevel9k.zsh-theme
 
 export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
 
@@ -108,7 +113,7 @@ source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 ## Load another bash file regarded as containing secret info.
 ## This will usually contain secret keys and all of that.
 ## While I want my dotfiles to be on GitHub, this is too sensitive
-source ~/.secrets
+# source ~/.secrets
 
 ## Open Neovim in a cinch.
 ## If a path is given (as in `v path`), it opens the given path. Path can be a file or directory.
@@ -171,10 +176,10 @@ work_on_project() {
     for x in $(seq 1000); do say "Time to stop working fella"; sleep 0.5; done
 }
 
-source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+# source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source ~/.go.zsh
+# source ~/.go.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/lanreadelowo/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lanreadelowo/Downloads/google-cloud-sdk/path.zsh.inc'; fi
@@ -183,3 +188,5 @@ if [ -f '/Users/lanreadelowo/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . 
 if [ -f '/Users/lanreadelowo/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lanreadelowo/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/Users/lanreadelowo/.deta/bin:$PATH"
 
+source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
