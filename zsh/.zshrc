@@ -26,8 +26,9 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH="/Users/lanreadelowo/.local/share/solana/install/active_release/bin:$PATH"
 
-# source $HOME/.cargo/env
+source $HOME/.cargo/env
 
 ## Make sure gpg works
 export GPG_TTY=$(tty)
