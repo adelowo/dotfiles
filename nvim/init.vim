@@ -78,6 +78,8 @@ Plug 'tomlion/vim-solidity'
 
 Plug 'wakatime/vim-wakatime'
 
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 "}}}
