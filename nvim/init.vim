@@ -28,8 +28,9 @@ Plug 'dense-analysis/ale'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
 Plug 'mattn/emmet-vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'janko-m/vim-test'
 Plug 'mileszs/ack.vim'
 Plug 'simnalamburt/vim-mundo'
@@ -79,6 +80,7 @@ Plug 'tomlion/vim-solidity'
 Plug 'wakatime/vim-wakatime'
 
 Plug 'ryanoasis/vim-devicons'
+
 
 call plug#end()
 
@@ -213,8 +215,18 @@ nmap <Leader>t :TestSuite<CR>
 nmap <Leader>tl :TestLast<CR>
 nmap <Leader>tv :TestVisit<CR>
 
-nmap <C-p> :Files<CR>
 nmap <S-t> :W<CR>
+
+"{{{ Telescope
+
+nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <C-o> <cmd>Telescope live_grep<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+"}}}
 
 let g:jsx_ext_required = 0
 let g:session_autosave = 'no'
