@@ -28,6 +28,11 @@ Plug 'dense-analysis/ale'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
 Plug 'mattn/emmet-vim'
+
+" Only reason we still have fzf here is because of vim-go uses fzf for :GoDecls
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -116,11 +121,12 @@ nnoremap <Leader>w :w<CR>
 
 "}}}
 
+
 """ GOD mode
-" nnoremap <Up> :echomsg "disabled.. Use k"<CR>
-" nnoremap <Down> :echomsg "disabled.Use j"<CR>
-" nnoremap <Left> :echomsg "disabled. Use h"<CR>
-" nnoremap <Right> :echomsg "disabled..Use l"<CR>
+nnoremap <Up> :echomsg "disabled.. Use k"<CR>
+nnoremap <Down> :echomsg "disabled.Use j"<CR>
+nnoremap <Left> :echomsg "disabled. Use h"<CR>
+nnoremap <Right> :echomsg "disabled..Use l"<CR>
 
 if executable('ag')
 	let g:ackprg = 'ag --vimgrep'
@@ -226,6 +232,9 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" list git commits
+nnoremap <Leader>c :lua require'telescope.builtin'.git_commits{}<cr>
+
 "}}}
 
 let g:jsx_ext_required = 0
@@ -268,7 +277,7 @@ augroup filetype_go
   au FileType go nmap <Leader>gat :GoAddTags<CR>
   au FileType go nmap <Leader>gcov <Plug>(go-coverage-toggle)
   au FileType go nmap R <Plug>(go-rename)
-  au FileType go nmap <F12> :GoDecls<CR>
+  au FileType go nmap <Leader>gg :GoDecls<CR>
 augroup end
 
 "}}}
