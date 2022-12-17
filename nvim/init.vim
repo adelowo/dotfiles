@@ -29,6 +29,8 @@ Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
 Plug 'mattn/emmet-vim'
 
+Plug 'kristijanhusak/vim-carbon-now-sh'
+
 " Only reason we still have fzf here is because of vim-go uses fzf for :GoDecls
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
@@ -133,8 +135,8 @@ if executable('ag')
 endif
 
 " soft ruler at 100
-:set colorcolumn=200
-:hi ColorColumn ctermbg=lightcyan guibg=blue
+set colorcolumn=200
+hi ColorColumn ctermbg=lightcyan guibg=blue
 
 "" {{{ COC
 " use <tab> for trigger completion and navigate to the next complete item
