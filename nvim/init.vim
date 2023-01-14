@@ -88,6 +88,9 @@ Plug 'wakatime/vim-wakatime'
 
 Plug 'ryanoasis/vim-devicons'
 
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'gbprod/nord.nvim'
+Plug 'lmburns/kimbox'
 
 call plug#end()
 
@@ -369,7 +372,7 @@ let g:onedark_hide_endofbuffer = 1
 " colorscheme dracula
 " colorscheme nord
 " colorscheme nova
-colorscheme gruvbox
+colorscheme kimbox
 "
 "
 nnoremap <End> :nohlsearch<CR>
