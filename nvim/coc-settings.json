@@ -1,5 +1,4 @@
-{
-  "diagnostic.warningSign": "⚠️",
+{ "diagnostic.warningSign": "⚠️",
   "diagnostic.errorSign": "❌",
   "diagnostic.hintSign": "⚠️",
   "diagnostic.infoSign": "⚠️",
@@ -35,7 +34,10 @@
     "Markdown",
     "html",
     "scss",
-    "js"
+    "js",
+    "tsx",
+    "jsx",
+    "php"
   ],
   "tsserver.npm": "/usr/local/bin/npm"
 }

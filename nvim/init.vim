@@ -48,8 +48,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'plasticboy/vim-markdown'
-Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
-Plug 'stephpy/vim-php-cs-fixer'
 Plug 'elzr/vim-json'
 Plug 'dense-analysis/ale'
 Plug 'ternjs/tern_for_vim', {'build': 'npm install'}
@@ -298,7 +296,6 @@ let g:airline#extensions#ale#enabled = 1
 
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
-let g:ale_fixers['php'] = ['php_cs_fixer']
 let g:ale_fixers['ruby'] = ['rubocop']
 let g:ale_fixers['typescript'] = ['prettier', 'tslint']
 let g:ale_javascript_prettier_options = "--single-quote --trailing-comma es5 --print-width 80"
@@ -314,7 +311,7 @@ let g:ale_fix_on_save = 1
 let NERDTreeShowHidden=1
 let NERDTreeDirArrowExpandable = '▷'
 let NERDTreeDirArrowCollapsible = '▼'
-let NERDTreeIgnore=['\~$', 'node_modules[[dir]]', '.phpcd[[dir]]', '.git$[[dir]]']
+let NERDTreeIgnore=['\~$', 'node_modules[[dir]]', '.phpcd[[dir]]', '.git$[[dir]]', 'vendor[[dir]]']
 let NERDTreeWinSize=45
 let NERDTreeQuitOnOpen=1
 let NERDTreeMapJumpNextSibling = 0
