@@ -191,3 +191,4 @@ export PATH="/Users/lanreadelowo/.deta/bin:$PATH"
 
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"

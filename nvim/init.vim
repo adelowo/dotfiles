@@ -227,7 +227,7 @@ nmap <Leader>tv :TestVisit<CR>
 nmap <S-t> :W<CR>
 
 "{{{ Telescope
-
+"
 nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <C-o> <cmd>Telescope live_grep<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -278,6 +278,7 @@ augroup filetype_go
   au FileType go nmap <Leader>gt <Plug>(go-test)
   au FileType go nmap <Leader>ga <Plug>(go-alternate-vertical)
   au FileType go nmap <Leader>gat :GoAddTags<CR>
+  au FileType go nmap <Leader>gab :GoAddTags bson<CR>
   au FileType go nmap <Leader>gcov <Plug>(go-coverage-toggle)
   au FileType go nmap R <Plug>(go-rename)
   au FileType go nmap <Leader>gg :GoDecls<CR>
