@@ -1,5 +1,7 @@
 export TERM="xterm-256color"
 export LANG="en_US.UTF-8"
+export GPG_TTY=$(tty)
+
 if [ -z "$TMUX" ]; then
   exec tmux new-session -A -s workspace
 fi
@@ -30,8 +32,6 @@ export PATH="/Users/lanreadelowo/.local/share/solana/install/active_release/bin:
 
 source $HOME/.cargo/env
 
-## Make sure gpg works
-export GPG_TTY=$(tty)
 
 ## Give this an open tcp port and it would return it's PID
 ## I usually use this to kill processes
