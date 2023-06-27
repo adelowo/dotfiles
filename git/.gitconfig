@@ -21,6 +21,7 @@
 	; Run this with caution.
 	bclean = "!git branch | ack --match='  ' | sed 's/^[ *]*//' | sed 's/^/git branch -D /' | zsh"
 	fiend = "!git branch fiend && git checkout fiend"
+	lg = log --color --graph --abbrev-commit\n           --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
 [color]
 	ui = true
 [color "diff-highlight"]
