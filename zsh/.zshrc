@@ -30,6 +30,11 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="/Users/lanreadelowo/.local/share/solana/install/active_release/bin:$PATH"
 
+if which ruby >/dev/null && which gem >/dev/null; then
+    # add ruby gems path too
+    export PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi
+
 source $HOME/.cargo/env
 
 
