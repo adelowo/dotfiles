@@ -2,8 +2,10 @@
 	email = yo@lanre.wtf
 	name = Lanre Adelowo
 	signingkey = 17587ED6D8AD34DC6AEDB1265F48B4357241D209
+
 [push]
 	default = current
+
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore_global
@@ -12,6 +14,7 @@
 	commitGraph = true
 	autocrlf = input
 	safecrlf = false
+
 [alias]
 	prune = "fetch --prune"
         authors = "!git shortlog -s | cut -c8-"
@@ -22,13 +25,16 @@
 	bclean = "!git branch | ack --match='  ' | sed 's/^[ *]*//' | sed 's/^/git branch -D /' | zsh"
 	fiend = "!git branch fiend && git checkout fiend"
 	lg = log --color --graph --abbrev-commit\n           --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
+
 [color]
 	ui = true
+
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+
 [color "diff"]
 	meta = 227
 	frag = magenta bold
@@ -36,20 +42,29 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+
 [commit]
 	gpgsign = true
+
 [tag]
 	forceSignAnnotated = true
+
 [url "git@bitbucket.org:"]
 	insteadOf = https://bitbucket.org/
+
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 	insteadOf = https://github.com/
+
 [gc]
 	writeCommitGraph = true
+
 [http]
 	cookiefile = /Users/lanreadelowo/.gitcookies
+
 [receive]
 	advertisePushOptions = true
+
 [gpg]
 	program = gpg
+

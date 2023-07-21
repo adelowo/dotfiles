@@ -1,21 +1,11 @@
-### MY Dotfiles
+### MY Dotfiles ( WIP )
 
-There be little :dragon: :dragon: :dragon: :dragon: :dragon: :dragon: !.. This repo contains my [Neovim](https://github.com/neovim/neovim), zsh and other stuffs use over and over again.
+I am making critical updates to my dotfiles. Why?
 
-Here is what my editor currently looks like 
+- To fix organization. I started using Neovim in 2017 and i ended up with a ridiculously large `init.vim` because i was just learning on the go 
+and kept adding stuff to the same file. It became hard to read/find simple configs
+- Moving onto better tech. Vimscript is ugly and annoying to write. I am switching fully to Lua
 
-![Neovim](https://github.com/adelowo/dotfiles/blob/master/db/nvim.png)
+You can take a look at my dotfiles I used from 2017-2023 at this commit d2a27a69a700ecafdbee07043dd5ee0c01c06476
 
-To make use of this ;
-
-```bash
-
-$ git clone git://github.com/adelowo/dotfiles.git
-$ cd dotfiles
-$ ## See caveat beneath before running the command below
-$ ./install.sh
-
-```
-
-> Warning, It would delete your current `~/.config/nvim/init.vim` and `.zshrc` and create a new one which links to that of this repo
 
