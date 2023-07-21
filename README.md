@@ -6,6 +6,6 @@ I am making critical updates to my dotfiles. Why?
 and kept adding stuff to the same file. It became hard to read/find simple configs
 - Moving onto better tech. Vimscript is ugly and annoying to write. I am switching fully to Lua
 
-You can take a look at my dotfiles I used from 2017-2023 at this commit d2a27a69a700ecafdbee07043dd5ee0c01c06476
+You can take a look at my dotfiles I used from 2017-2023 at this commit [d2a27a69a700ecafdbee07043dd5ee0c01c06476](https://github.com/adelowo/dotfiles/commit/d2a27a69a700ecafdbee07043dd5ee0c01c06476)
 
 
