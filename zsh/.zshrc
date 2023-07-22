@@ -1,10 +1,20 @@
 export TERM="xterm-256color"
 export LANG="en_US.UTF-8"
+
+## GPG signing to keep my sanity
 export GPG_TTY=$(tty)
 
+## Stop random mail messages
+export MAILCHECK=0
+
+## Path to your oh-my-zsh installation.
+export ZSH=~/.oh-my-zsh
+
+# keep tmux alive 
 if [ -z "$TMUX" ]; then
   exec tmux new-session -A -s workspace
 fi
+
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -14,8 +24,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Default to tmux all the time
-# if [ -z $TMUX ]; then; tmux; fi
 
 export GOPATH=$HOME/go
 export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/go/bin:$HOME/.config/composer/vendor/bin:$GOPATH/bin:/usr/local/mysql/bin:$HOME/flutter/bin:Users/${USER}/Library/Android/sdk/platform-tools
@@ -29,9 +37,8 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="/Users/lanreadelowo/.local/share/solana/install/active_release/bin:$PATH"
-
+# add ruby gems to PATH too
 if which ruby >/dev/null && which gem >/dev/null; then
-    # add ruby gems path too
     export PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
 
@@ -63,11 +70,6 @@ portpid()
 	lsof -i tcp:$1 -P | awk '{print $2}' | grep -e "[0-9]"
 }
 
-## Stop random mail messages
-export MAILCHECK=0
-
-## Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
 
 POWERLEVEL10K_MODE='nerdfonts-complete'
 ZSH_THEME="powerlevel10k/powerlevel10k"
