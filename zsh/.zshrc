@@ -123,6 +123,10 @@ if type bat > /dev/null 2>&1; then
   alias cat="bat"
 fi
 
+if type lsd > /dev/null 2>&1;then 
+  alias ls="lsd"
+fi
+
 # Some other useful plugins
 source $HOME/.zsh/bd/bd.zsh
 
