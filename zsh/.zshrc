@@ -42,6 +42,11 @@ if which ruby >/dev/null && which gem >/dev/null; then
     export PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
 
+## zig lang 
+export PATH="$PATH:$(brew --prefix llvm@15)/bin"
+export LDFLAGS="$LDFLAGS -L$(brew --prefix llvm@15)/lib"
+export CPPFLAGS="$CPPFLAGS -I$(brew --prefix llvm@15)/include"
+
 source $HOME/.cargo/env
 
 lg()
@@ -55,6 +60,9 @@ lg()
             rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
     fi
 }
+
+
+
 
 
 ## Give this an open tcp port and it would return it's PID
