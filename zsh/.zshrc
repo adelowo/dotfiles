@@ -109,7 +109,7 @@ export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git z docker aws brew battery golang gh helm httpie kubectl minikube node react-native redis-cli rust ruby rails )
+plugins=(git z docker aws brew battery golang gh helm httpie kubectl minikube node react-native redis-cli rust ruby rails)
 
 source $ZSH/oh-my-zsh.sh
 
