@@ -12,6 +12,7 @@ return {
         "go",
         "gomod",
         "gosum",
+        "gitignore",
         "gowork",
         "hcl",
         "json",
