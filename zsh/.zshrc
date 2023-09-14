@@ -223,3 +223,10 @@ export PATH="/Users/lanreadelowo/.deta/bin:$PATH"
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+
+# bun completions
+[ -s "/Users/lanreadelowo/.bun/_bun" ] && source "/Users/lanreadelowo/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
