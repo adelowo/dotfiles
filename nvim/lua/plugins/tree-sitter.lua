@@ -9,6 +9,7 @@ return {
         "dockerfile",
         "javascript",
         "typescript",
+        "tsx",
         "go",
         "gomod",
         "gosum",
