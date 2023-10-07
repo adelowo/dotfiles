@@ -21,4 +21,7 @@ return {
   event = { "CmdlineEnter" },
   ft = { "go", "gomod" },
   build = ':lua require("go.install").update_all_sync()',
+  keys = {
+    { "<leader>gat", "<cmd>GoAddTag<cr>", desc = "Add json tags" },
+  },
 }
