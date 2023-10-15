@@ -2,3 +2,6 @@
 .phpcd/
 tags
 .vscode/
+data/
+node_modules/
+vendor/
