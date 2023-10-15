@@ -4,12 +4,12 @@ return {
 
   { "dracula/vim" },
   { "shaunsingh/nord.nvim" },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
-  -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "habamax",
+      colorscheme = "catppuccin",
     },
   },
 }
