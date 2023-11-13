@@ -23,6 +23,7 @@ return {
   build = ':lua require("go.install").update_all_sync()',
   keys = {
     { "<leader>gat", "<cmd>GoAddTag<cr>", desc = "Add json tags" },
-    { "<leader>gam", "<cmd>GoAddTag mapstructure<cr>", desc = "Add json tags" },
+    { "<leader>gam", "<cmd>GoAddTag mapstructure<cr>", desc = "Add mapstructure tags" },
+    { "<leader>gae", "<cmd>GoAddTag env<cr>", desc = "Add env tags" },
   },
 }
