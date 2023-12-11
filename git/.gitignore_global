@@ -6,3 +6,5 @@ data/
 node_modules/
 vendor/
 venv/
+__pycache__/
+.env
