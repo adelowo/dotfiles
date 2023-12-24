@@ -1,7 +1,5 @@
 return {
-  -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
-
   { "dracula/vim" },
   { "shaunsingh/nord.nvim" },
   {
@@ -14,11 +12,16 @@ return {
       })
     end,
   },
-
+  {
+    "loctvl842/monokai-pro.nvim",
+    config = function()
+      require("monokai-pro").setup()
+    end,
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "monokai-pro",
     },
   },
 }
