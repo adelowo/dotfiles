@@ -23,9 +23,9 @@ return {
     end
   end,
   keys = {
-    { "<leader>dt", "<cmd>DapToggleBreakpoint", desc = "Toggle debugger breakpoint" },
-    { "<leader>dc", "<cmd>DapContinue", desc = "Continue running debugger" },
-    { "<leader>dx", "<cmd>DapTerminate", desc = "Kill Debugger" },
-    { "<leader>ds", "<cmd>DapStepOver", desc = "Step over Debugger" },
+    { "<leader>dt", "<cmd>DapToggleBreakpoint<cr>", desc = "Toggle debugger breakpoint" },
+    { "<leader>dc", "<cmd>DapContinue<cr>", desc = "Continue running debugger" },
+    { "<leader>dx", "<cmd>DapTerminate<cr>", desc = "Kill Debugger" },
+    { "<leader>ds", "<cmd>DapStepOver<cr>", desc = "Step over Debugger" },
   },
 }
