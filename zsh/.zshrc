@@ -109,6 +109,12 @@ if type lsd > /dev/null 2>&1;then
   alias ls="lsd"
 fi
 
+if type autojump > /dev/null 2>&1;then 
+  [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+  # alias j="autojump"
+  alias z="j"
+fi
+
 
 
 ## Open Neovim in a cinch.
@@ -141,5 +147,7 @@ work_on_project() {
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+source ~/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 source <(starship init zsh)
