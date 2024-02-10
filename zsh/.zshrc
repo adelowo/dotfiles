@@ -150,4 +150,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 source ~/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
+source <(kubebuilder completion zsh)
 source <(starship init zsh)
