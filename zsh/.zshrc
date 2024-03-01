@@ -148,6 +148,10 @@ work_on_project() {
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+
+autoload -U compinit
+compinit -i
+
 source ~/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 source <(kubebuilder completion zsh)
