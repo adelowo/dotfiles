@@ -1,7 +1,8 @@
 {
   "extras": [
     "lazyvim.plugins.extras.formatting.black",
-    "lazyvim.plugins.extras.lang.markdown"
+    "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.lang.yaml"
   ],
   "news": {
     "NEWS.md": "2123"
