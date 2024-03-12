@@ -156,3 +156,5 @@ source ~/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 source <(kubebuilder completion zsh)
 source <(starship init zsh)
+source <(cast completions zsh)
+
