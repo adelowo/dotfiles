@@ -4,3 +4,5 @@
 --
 
 vim.opt.winbar = "%=%m %f"
+
+vim.opt.swapfile = false
