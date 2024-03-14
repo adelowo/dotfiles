@@ -14,7 +14,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
-    { import = "lazyvim.plugins.extras.lang.go" },
+    -- { import = "lazyvim.plugins.extras.lang.go" },
     { import = "lazyvim.plugins.extras.lang.ruby" },
     { import = "lazyvim.plugins.extras.lang.tex" },
     { import = "lazyvim.plugins.extras.lang.terraform" },
@@ -55,10 +55,6 @@ require("lazy").setup({
       },
     },
   },
-})
-
-require("mason-null-ls").setup({
-  ensure_installed = { "black" },
 })
 
 local null_ls = require("null-ls")
