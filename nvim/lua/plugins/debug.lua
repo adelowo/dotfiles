@@ -9,6 +9,8 @@ return {
 
     local dap, dapui = require("dap"), require("dapui")
 
+    dapui.setup()
+
     dap.listeners.before.attach.dapui_config = function()
       dapui.open()
     end
@@ -27,5 +29,6 @@ return {
     { "<leader>dc", "<cmd>DapContinue<cr>", desc = "Continue running debugger" },
     { "<leader>dx", "<cmd>DapTerminate<cr>", desc = "Kill Debugger" },
     { "<leader>ds", "<cmd>DapStepOver<cr>", desc = "Step over Debugger" },
+    { "<leader>du", "<cmd>DapToggleRepl<cr>", desc = "open Debugger Repl" },
   },
 }
