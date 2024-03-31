@@ -6,10 +6,6 @@ export GPG_TTY=$(tty)
 export GPG_TTY=$(tty)
 
 # keep tmux alive always
-if [ -z "$TMUX" ]; then
-  exec tmux new-session -A -s workspace
-fi
-
 
 export GOPATH=$HOME/go
 export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/go/bin:$HOME/.config/composer/vendor/bin:$GOPATH/bin:/usr/local/mysql/bin:$HOME/flutter/bin:Users/${USER}/Library/Android/sdk/platform-tools
@@ -159,4 +155,3 @@ source <(starship init zsh)
 source <(cast completions zsh)
 source <(localstack completion zsh)
 source <(flyctl completion zsh)
-
