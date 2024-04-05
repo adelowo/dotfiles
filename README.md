@@ -1,5 +1,7 @@
 # Dotfiles ( always a WIP )
 
+Currently using Zellij as a multiplexer and switched away from Tmux. ZSH, iTerm2, starship and Neovim
+
 I am making critical updates to my dotfiles. Why?
 
 - To fix organization. I started using Neovim in 2017 and i ended up with a
