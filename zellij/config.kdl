@@ -1,12 +1,14 @@
-keybinds clear-defaults=true {
+// If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
+keybinds {
     normal {
-        bind "Alt m" { SwitchToMode "Move"; }
+        // uncomment this and adjust key if using copy_on_select=false
+        // bind "Alt c" { Copy; }
     }
     locked {
-        bind "Alt g" { SwitchToMode "Normal"; }
+        bind "Ctrl g" { SwitchToMode "Normal"; }
     }
     resize {
-        bind "Alt n" { SwitchToMode "Normal"; }
+        bind "Ctrl n" { SwitchToMode "Normal"; }
         bind "h" "Left" { Resize "Increase Left"; }
         bind "j" "Down" { Resize "Increase Down"; }
         bind "k" "Up" { Resize "Increase Up"; }
@@ -19,7 +21,7 @@ keybinds clear-defaults=true {
         bind "-" { Resize "Decrease"; }
     }
     pane {
-        bind "Alt p" { SwitchToMode "Normal"; }
+        bind "Ctrl p" { SwitchToMode "Normal"; }
         bind "h" "Left" { MoveFocus "Left"; }
         bind "l" "Right" { MoveFocus "Right"; }
         bind "j" "Down" { MoveFocus "Down"; }
@@ -36,7 +38,7 @@ keybinds clear-defaults=true {
         bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     }
     move {
-        bind "Alt m" { SwitchToMode "Normal"; }
+        bind "Ctrl h" { SwitchToMode "Normal"; }
         bind "n" "Tab" { MovePane; }
         bind "p" { MovePaneBackwards; }
         bind "h" "Left" { MovePane "Left"; }
@@ -45,7 +47,7 @@ keybinds clear-defaults=true {
         bind "l" "Right" { MovePane "Right"; }
     }
     tab {
-        bind "Alt t" { SwitchToMode "Normal"; }
+        bind "Ctrl t" { SwitchToMode "Normal"; }
         bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "h" "Left" "Up" "k" { GoToPreviousTab; }
         bind "l" "Right" "Down" "j" { GoToNextTab; }
@@ -67,26 +69,26 @@ keybinds clear-defaults=true {
         bind "Tab" { ToggleTab; }
     }
     scroll {
-        bind "Alt s" { SwitchToMode "Normal"; }
+        bind "Ctrl s" { SwitchToMode "Normal"; }
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
         bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
-        bind "Alt c" { ScrollToBottom; SwitchToMode "Normal"; }
+        bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
-        bind "Alt f" "PageDown" "Right" "l" { PageScrollDown; }
-        bind "Alt b" "PageUp" "Left" "h" { PageScrollUp; }
+        bind "Ctrl f" "PageDown" "Right" "l" { PageScrollDown; }
+        bind "Ctrl b" "PageUp" "Left" "h" { PageScrollUp; }
         bind "d" { HalfPageScrollDown; }
         bind "u" { HalfPageScrollUp; }
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
     }
     search {
-        bind "Alt s" { SwitchToMode "Normal"; }
-        bind "Alt c" { ScrollToBottom; SwitchToMode "Normal"; }
+        bind "Ctrl s" { SwitchToMode "Normal"; }
+        bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
-        bind "Alt f" "PageDown" "Right" "l" { PageScrollDown; }
-        bind "Alt b" "PageUp" "Left" "h" { PageScrollUp; }
+        bind "Ctrl f" "PageDown" "Right" "l" { PageScrollDown; }
+        bind "Ctrl b" "PageUp" "Left" "h" { PageScrollUp; }
         bind "d" { HalfPageScrollDown; }
         bind "u" { HalfPageScrollUp; }
         bind "n" { Search "down"; }
@@ -96,20 +98,20 @@ keybinds clear-defaults=true {
         bind "o" { SearchToggleOption "WholeWord"; }
     }
     entersearch {
-        bind "Alt c" "Esc" { SwitchToMode "Scroll"; }
+        bind "Ctrl c" "Esc" { SwitchToMode "Scroll"; }
         bind "Enter" { SwitchToMode "Search"; }
     }
     renametab {
-        bind "Alt c" { SwitchToMode "Normal"; }
+        bind "Ctrl c" { SwitchToMode "Normal"; }
         bind "Esc" { UndoRenameTab; SwitchToMode "Tab"; }
     }
     renamepane {
-        bind "Alt c" { SwitchToMode "Normal"; }
+        bind "Ctrl c" { SwitchToMode "Normal"; }
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
     session {
-        bind "Alt o" { SwitchToMode "Normal"; }
-        bind "Alt s" { SwitchToMode "Scroll"; }
+        bind "Ctrl o" { SwitchToMode "Normal"; }
+        bind "Ctrl s" { SwitchToMode "Scroll"; }
         bind "d" { Detach; }
         bind "w" {
             LaunchOrFocusPlugin "zellij:session-manager" {
@@ -121,7 +123,7 @@ keybinds clear-defaults=true {
     }
     tmux {
         bind "[" { SwitchToMode "Scroll"; }
-        bind "Alt b" { Write 2; SwitchToMode "Normal"; }
+        bind "Ctrl b" { Write 2; SwitchToMode "Normal"; }
         bind "\"" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "%" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "z" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
@@ -143,8 +145,8 @@ keybinds clear-defaults=true {
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
     }
     shared_except "locked" {
-        bind "Alt g" { SwitchToMode "Locked"; }
-        bind "Alt q" { Quit; }
+        bind "Ctrl g" { SwitchToMode "Locked"; }
+        bind "Ctrl q" { Quit; }
         bind "Alt n" { NewPane; }
         bind "Alt h" "Alt Left" { MoveFocusOrTab "Left"; }
         bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
@@ -159,35 +161,34 @@ keybinds clear-defaults=true {
         bind "Enter" "Esc" { SwitchToMode "Normal"; }
     }
     shared_except "pane" "locked" {
-        bind "Alt p" { SwitchToMode "Pane"; }
+        bind "Ctrl p" { SwitchToMode "Pane"; }
     }
     shared_except "resize" "locked" {
-        bind "Alt n" { SwitchToMode "Resize"; }
+        bind "Ctrl n" { SwitchToMode "Resize"; }
     }
     shared_except "scroll" "locked" {
-        bind "Alt s" { SwitchToMode "Scroll"; }
+        bind "Ctrl s" { SwitchToMode "Scroll"; }
     }
     shared_except "session" "locked" {
-        bind "Alt o" { SwitchToMode "Session"; }
+        bind "Ctrl o" { SwitchToMode "Session"; }
     }
     shared_except "tab" "locked" {
-        bind "Alt t" { SwitchToMode "Tab"; }
+        bind "Ctrl t" { SwitchToMode "Tab"; }
     }
     shared_except "move" "locked" {
-        bind "Alt m" { SwitchToMode "Move"; }
+        bind "Ctrl h" { SwitchToMode "Move"; }
     }
     shared_except "tmux" "locked" {
-        bind "Alt b" { SwitchToMode "Tmux"; }
+        bind "Ctrl b" { SwitchToMode "Tmux"; }
     }
 }
 
 plugins {
-    // tab-bar { path "tab-bar"; }
-    // status-bar { path "status-bar"; }
-    // strider { path "strider"; }
-    // compact-bar { path "compact-bar"; }
-    // session-manager { path "session-manager"; }
-    compact-bar-x { path "/home/gdmr/repos/internal/rust/compact-bar-x/target/wasm32-wasi/release/compact-bar-x.wasm"; }
+    tab-bar { path "tab-bar"; }
+    status-bar { path "status-bar"; }
+    strider { path "strider"; }
+    compact-bar { path "compact-bar"; }
+    session-manager { path "session-manager"; }
 }
 
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
@@ -203,12 +204,12 @@ plugins {
 //    - true
 //    - false (Default)
 //
-simplified_ui true
+// simplified_ui true
 
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
 //
-// default_shell ""
+// default_shell "fish"
 
 // Choose the path to override cwd that zellij will use for opening new panes
 //
@@ -219,7 +220,7 @@ simplified_ui true
 //   - true (default)
 //   - false
 //
-pane_frames false
+// pane_frames true
 
 // Toggle between having Zellij lay out panes according to a predefined set of layouts whenever possible
 // Options:
@@ -228,50 +229,123 @@ pane_frames false
 //
 // auto_layout true
 
+// Whether sessions should be serialized to the cache folder (including their tabs/panes, cwds and running commands) so that they can later be resurrected
+// Options:
+//   - true (default)
+//   - false
+//
+// session_serialization false
+
+// Whether pane viewports are serialized along with the session, default is false
+// Options:
+//   - true
+//   - false (default)
+// serialize_pane_viewport true
+
+// Scrollback lines to serialize along with the pane viewport when serializing sessions, 0
+// defaults to the scrollback size. If this number is higher than the scrollback size, it will
+// also default to the scrollback size. This does nothing if `serialize_pane_viewport` is not true.
+//
+// scrollback_lines_to_serialize 10000
+
 // Define color themes for Zellij
 // For more examples, see: https://github.com/zellij-org/zellij/tree/main/example/themes
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
-themes {
-    vscode_dark_modern {
-        fg      "#a9a9a9"
-        bg      "#264f78"
-        red     "#cd3131"
-        green   "#0dbc79"
-        yellow  "#e5e510"
-        blue    "#2472c8"
-        magenta "#bc3fbc"
-        orange  "#ee9d28"
-        cyan    "#11a8cd"
-        black   "#181818"
-        white   "#e5e5e5"
-    }
-    
-    kanagawa_dragon {
-        fg      "#c5c9c5"
-        bg      "#181616"
-        black   "#0d0c0c"
-        red     "#c4746e"
-        green   "#8a9a7b"
-        yellow  "#c4b28a"
-        blue    "#8ba4b0"
-        magenta "#a292a3"
-        cyan    "#8ea4a2"
-        white   "#c8c093"
-        orange  "#ffa066"
-    }
+// themes {
+//     dracula {
+//         fg 248 248 242
+//         bg 40 42 54
+//         red 255 85 85
+//         green 80 250 123
+//         yellow 241 250 140
+//         blue 98 114 164
+//         magenta 255 121 198
+//         orange 255 184 108
+//         cyan 139 233 253
+//         black 0 0 0
+//         white 255 255 255
+//     }
+// }
 
-    base16 {
-        fg      "#D8D8D8"
-        bg      "#0E0E0E"
-        black   "#181818"
-        red     "#AC4242"
-        green   "#90A959"
-        yellow  "#F4BF75"
-        blue    "#6A9FB5"
-        magenta "#AA759F"
-        cyan    "#75B5AA"
-        white   "#F8F8F8"
-        orange  "#ffa066"
-    }
-}
+// Choose the theme that is specified in the themes section.
+// Default: default
+//
+// theme "default"
+
+// The name of the default layout to load on startup
+// Default: "default"
+//
+// default_layout "compact"
+
+// Choose the mode that zellij uses when starting up.
+// Default: normal
+//
+// default_mode "locked"
+
+// Toggle enabling the mouse mode.
+// On certain configurations, or terminals this could
+// potentially interfere with copying text.
+// Options:
+//   - true (default)
+//   - false
+//
+// mouse_mode false
+
+// Configure the scroll back buffer size
+// This is the number of lines zellij stores for each pane in the scroll back
+// buffer. Excess number of lines are discarded in a FIFO fashion.
+// Valid values: positive integers
+// Default value: 10000
+//
+// scroll_buffer_size 10000
+
+// Provide a command to execute when copying text. The text will be piped to
+// the stdin of the program to perform the copy. This can be used with
+// terminal emulators which do not support the OSC 52 ANSI control sequence
+// that will be used by default if this option is not set.
+// Examples:
+//
+// copy_command "xclip -selection clipboard" // x11
+// copy_command "wl-copy"                    // wayland
+// copy_command "pbcopy"                     // osx
+
+// Choose the destination for copied text
+// Allows using the primary selection buffer (on x11/wayland) instead of the system clipboard.
+// Does not apply when using copy_command.
+// Options:
+//   - system (default)
+//   - primary
+//
+// copy_clipboard "primary"
+
+// Enable or disable automatic copy (and clear) of selection when releasing mouse
+// Default: true
+//
+// copy_on_select false
+
+// Path to the default editor to use to edit pane scrollbuffer
+// Default: $EDITOR or $VISUAL
+//
+// scrollback_editor "/usr/bin/vim"
+
+// When attaching to an existing session with other users,
+// should the session be mirrored (true)
+// or should each user have their own cursor (false)
+// Default: false
+//
+// mirror_session true
+
+// The folder in which Zellij will look for layouts
+//
+// layout_dir "/path/to/my/layout_dir"
+
+// The folder in which Zellij will look for themes
+//
+// theme_dir "/path/to/my/theme_dir"
+
+// Enable or disable the rendering of styled and colored underlines (undercurl).
+// May need to be disabled for certain unsupported terminals
+// Default: true
+//
+// styled_underlines false
