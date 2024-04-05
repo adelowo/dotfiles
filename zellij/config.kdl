@@ -26,6 +26,12 @@ keybinds {
         bind "L" { Resize "Decrease Right"; }
         bind "=" "+" { Resize "Increase"; }
         bind "-" { Resize "Decrease"; }
+
+        unbind "Ctrl h"
+        unbind "Ctrl c"
+        unbind "Ctrl t"
+        unbind "Ctrl o"
+        unbind "Ctrl n"
     }
     pane {
         bind "Ctrl p" { SwitchToMode "Normal"; }
@@ -43,6 +49,11 @@ keybinds {
         bind "w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
         bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
+
+        unbind "Ctrl h"
+        unbind "Ctrl c"
+        unbind "Ctrl t"
+        unbind "Ctrl o"
     }
     move {
         bind "Ctrl x" { SwitchToMode "Normal"; }
@@ -52,6 +63,12 @@ keybinds {
         bind "j" "Down" { MovePane "Down"; }
         bind "k" "Up" { MovePane "Up"; }
         bind "l" "Right" { MovePane "Right"; }
+
+        unbind "Ctrl h"
+        unbind "Ctrl c"
+        unbind "Ctrl t"
+        unbind "Ctrl o"
+        unbind "Ctrl n"
     }
     tab {
         bind "Ctrl z" { SwitchToMode "Normal"; }
@@ -74,6 +91,12 @@ keybinds {
         bind "8" { GoToTab 8; SwitchToMode "Normal"; }
         bind "9" { GoToTab 9; SwitchToMode "Normal"; }
         bind "Tab" { ToggleTab; }
+
+        unbind "Ctrl h"
+        unbind "Ctrl c"
+        unbind "Ctrl t"
+        unbind "Ctrl o"
+        unbind "Ctrl n"
     }
     session {
         bind "Ctrl s" { SwitchToMode "Normal"; }
