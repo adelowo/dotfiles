@@ -113,6 +113,7 @@ keybinds {
         unbind "Ctrl c"
         unbind "Ctrl t"
         unbind "Ctrl o"
+        unbind "Ctrl r"
     }
     tmux {
         bind "[" { SwitchToMode "Scroll"; }
