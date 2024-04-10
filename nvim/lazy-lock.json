@@ -54,6 +54,7 @@
   "none-ls.nvim": { "branch": "main", "commit": "18910d09d21d7df339805343bfe4a2b2e41c057b" },
   "nord.nvim": { "branch": "master", "commit": "80c1e5321505aeb22b7a9f23eb82f1e193c12470" },
   "nui.nvim": { "branch": "main", "commit": "cbd2668414331c10039278f558630ed19b93e69b" },
+  "nvim-ansible": { "branch": "main", "commit": "d115cb9bb3680c990e2684f58cf333663fff03b8" },
   "nvim-cmp": { "branch": "main", "commit": "97dc716fc914c46577a4f254035ebef1aa72558a" },
   "nvim-dap": { "branch": "master", "commit": "405df1dcc2e395ab5173a9c3d00e03942c023074" },
   "nvim-dap-go": { "branch": "main", "commit": "36abe1d320cb61bfdf094d4e0fe815ef58f2302a" },
