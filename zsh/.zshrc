@@ -90,11 +90,11 @@ if type nvim > /dev/null 2>&1; then
   alias vim="nvim"
 fi
 
-if type bun > /dev/null 2>&1; then
-  alias npm="bun"
-  alias yarn="bun"
-  alias npx="bunx"
-fi
+# if type bun > /dev/null 2>&1; then
+#   alias npm="bun"
+#   alias yarn="bun"
+#   alias npx="bunx"
+# fi
 
 
 if type bat > /dev/null 2>&1; then
