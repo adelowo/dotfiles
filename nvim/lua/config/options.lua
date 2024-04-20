@@ -6,3 +6,10 @@
 vim.opt.winbar = "%=%m %f"
 
 vim.opt.swapfile = false
+
+-- Enable ruler
+vim.o.ruler = true
+
+-- Set color column at column 100
+vim.cmd("set colorcolumn=100")
+vim.cmd("highlight ColorColumn ctermbg=red guibg=red")
