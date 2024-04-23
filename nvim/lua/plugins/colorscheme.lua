@@ -58,7 +58,6 @@ return {
 
       -- vim.api.nvim_set_hl
       vim.api.nvim_set_hl(0, "@markdownUrl", { underline = true, italic = true })
-      -- Load the colorscheme
       vim.cmd([[colorscheme kanagawa-wave]])
     end,
   },
