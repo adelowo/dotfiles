@@ -153,6 +153,7 @@ source ~/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source <(kubebuilder completion zsh)
 source <(starship init zsh)
 source <(cast completions zsh)
+source <(forge completions zsh)
 source <(localstack completion zsh)
 source <(flyctl completion zsh)
 eval "$(zellij setup --generate-auto-start zsh)"
