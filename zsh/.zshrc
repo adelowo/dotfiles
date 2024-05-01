@@ -1,11 +1,8 @@
 export TERM="xterm-256color"
 export LANG="en_US.UTF-8"
-export GPG_TTY=$(tty)
-
+#
 ## GPG signing to keep my sanity
 export GPG_TTY=$(tty)
-
-# keep tmux alive always
 
 export GOPATH=$HOME/go
 export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/go/bin:$HOME/.config/composer/vendor/bin:$GOPATH/bin:/usr/local/mysql/bin:$HOME/flutter/bin:Users/${USER}/Library/Android/sdk/platform-tools
@@ -156,4 +153,5 @@ source <(cast completions zsh)
 source <(forge completions zsh)
 source <(localstack completion zsh)
 source <(flyctl completion zsh)
+## always open zellij
 eval "$(zellij setup --generate-auto-start zsh)"
