@@ -1,6 +1,6 @@
 # Dotfiles ( always a WIP )
 
-Currently using Zellij as a multiplexer and switched away from Tmux. ZSH, Kitty, starship and Neovim
+Currently using Zellij as a multiplexer & switched away from Tmux. ZSH, Wezterm,starship & Neovim.
 
 I am making critical updates to my dotfiles. Why?
 
