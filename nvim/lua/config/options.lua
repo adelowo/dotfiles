@@ -11,5 +11,5 @@ vim.opt.swapfile = false
 vim.o.ruler = true
 
 -- Set color column at column 100
-vim.cmd("set colorcolumn=100")
+vim.cmd("set colorcolumn=120")
 vim.cmd("highlight ColorColumn ctermbg=red guibg=red")
