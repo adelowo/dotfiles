@@ -15,3 +15,9 @@ switching fully to Lua
 ## Current look
 
 ![terminal looks like this](./assets/terminal-2024.png)
+
+### Floating and stacked panes
+
+> Prefer this so much to Tmux panes
+
+![Floating terminal](./assets/floating.png)
