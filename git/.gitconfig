@@ -17,7 +17,7 @@
 
 [alias]
 	prune = "fetch --prune"
-        authors = "!git shortlog -s | cut -c8-"
+  authors = "!git shortlog -s | cut -c8-"
 	; bclean clears up all local branches leaving only the current active branch.
 	; Say you have 5 branches (including master), then you checkout the fiend branch.
 	; Running git bclean would delete the other 4 branches, leaving only the fiend branch.
@@ -48,9 +48,6 @@
 
 [tag]
 	forceSignAnnotated = true
-
-[url "git@bitbucket.org:"]
-	insteadOf = https://bitbucket.org/
 
 [url "git@github.com:"]
 	insteadOf = https://github.com/

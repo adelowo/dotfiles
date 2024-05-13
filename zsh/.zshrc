@@ -1,6 +1,6 @@
 export TERM="xterm-256color"
 export LANG="en_US.UTF-8"
-#
+
 ## GPG signing to keep my sanity
 export GPG_TTY=$(tty)
 
@@ -16,6 +16,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="/Users/lanreadelowo/.local/share/solana/install/active_release/bin:$PATH"
+
 # add ruby gems to PATH too
 if which ruby >/dev/null && which gem >/dev/null; then
     export PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
@@ -54,27 +55,6 @@ portpid()
 }
 
 
-POWERLEVEL10K_MODE='nerdfonts-complete'
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-## POWERLEVEL10K_PROMPT_ON_NEWLINE=true
-POWERLEVEL10K_MULTILINE_FIRST_PROMPT_PREFIX="%{%F{249}%}\u250f"
-POWERLEVEL10K_MULTILINE_LAST_PROMPT_PREFIX="%{%F{249}%}\u2517%{%F{default}%} "
-
-POWERLEVEL10K_SHORTEN_STRATEGY="truncate_middle"
-POWERLEVEL10K_STATUS_VERBOSE=false
-POWERLEVEL10K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator dir context vcs)
-POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=(rbenv rvm battery time)
-POWERLEVEL10K_SHOW_CHANGESET=true
-POWERLEVEL10K_CHANGESET_HASH_LENGTH=6
-
-POWERLEVEL10K_BATTERY_CHARGING='green'
-POWERLEVEL10K_BATTERY_CHARGED='$DEFAULT_COLOR'
-POWERLEVEL10K_BATTERY_DISCONNECTED='yellow'
-POWERLEVEL10K_BATTERY_LOW_THRESHOLD='10'
-POWERLEVEL10K_BATTERY_LOW_COLOR='red'
-POWERLEVEL10K_TIME_FORMAT="%D{%H:%M \uE868  %d.%m.%y}"
-
 export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
 
 export EDITOR="nvim"
@@ -104,11 +84,8 @@ fi
 
 if type autojump > /dev/null 2>&1;then 
   [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
-  # alias j="autojump"
   alias z="j"
 fi
-
-
 
 ## Open Neovim in a cinch.
 ## If a path is given (as in `v path`), it opens the given path. Path can be a file or directory.
@@ -153,5 +130,6 @@ source <(cast completions zsh)
 source <(forge completions zsh)
 source <(localstack completion zsh)
 source <(flyctl completion zsh)
+
 ## always open zellij
 eval "$(zellij setup --generate-auto-start zsh)"
