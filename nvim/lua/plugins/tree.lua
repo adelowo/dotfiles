@@ -44,6 +44,7 @@ return {
     },
     window = {
       position = "right",
+      width = 30,
       mappings = {
         ["<space>"] = "none",
       },
