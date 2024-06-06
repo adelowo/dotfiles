@@ -3,6 +3,24 @@
 	name = Lanre Adelowo
 	signingkey = 17587ED6D8AD34DC6AEDB1265F48B4357241D209
 
+; Prevent a push to main by all means.
+; I already manually never do this but I recently ran into 
+; an issue where i ran into an issue where i ran "git rebase origin main" instead of "origin/main"
+; i got checkout'd to main and thought i was still on the same branch, I ran `git push -u origin -f`
+; Remote git server rejected it obviously but
+; Tiny issues like this can happen often, better to block them in their entirety
+; TLDR: this fixes only "git push". If you do "git push -u origin", it doesn't seem to work sadly and you will
+; have to use a pre hook to solve this usecase then
+[branch "main"]
+  remote = origin
+  pushRemote = random-branch-that-does-not-exists
+  merge = refs/heads/main
+
+[branch "master"]
+  remote = origin
+  pushRemote = random-branch-that-does-not-exists
+  merge = refs/heads/master
+
 [push]
 	default = current
 
