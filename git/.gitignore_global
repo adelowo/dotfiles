@@ -9,3 +9,5 @@ venv/
 __pycache__/
 .env
 oops.md
+.zig-cache/
+zig-out/
