@@ -12,3 +12,4 @@ oops.md
 .zig-cache/
 zig-out/
 storage/
+.infisical.json
