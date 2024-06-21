@@ -11,3 +11,4 @@ __pycache__/
 oops.md
 .zig-cache/
 zig-out/
+storage/
