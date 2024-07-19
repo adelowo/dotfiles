@@ -58,9 +58,14 @@ return {
 
       -- vim.api.nvim_set_hl
       vim.api.nvim_set_hl(0, "@markdownUrl", { underline = true, italic = true })
-      vim.cmd([[colorscheme kanagawa-wave]])
     end,
   },
+  {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  { "rose-pine/neovim", name = "rose-pine" },
   {
     "LazyVim/LazyVim",
     opts = {
