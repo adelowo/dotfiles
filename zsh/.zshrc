@@ -132,11 +132,8 @@ source <(forge completions zsh)
 source <(localstack completion zsh)
 source <(flyctl completion zsh)
 
-## always open zellij
-eval "$(zellij setup --generate-auto-start zsh)"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/lanreadelowo/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lanreadelowo/google-cloud-sdk/path.zsh.inc'; fi
-
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/lanreadelowo/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lanreadelowo/google-cloud-sdk/completion.zsh.inc'; fi
+
+## always open zellij
+eval "$(zellij setup --generate-auto-start zsh)"
