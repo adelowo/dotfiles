@@ -6,7 +6,7 @@ return {
       options = {
         background = true, -- If the screenshot should have a background.
         dark_mode = true, -- If the screenshot should be in dark mode.
-        theme = "tailwind", -- Theme
+        theme = "vercel", -- Theme
       },
     })
   end,
