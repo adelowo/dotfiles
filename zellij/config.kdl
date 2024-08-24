@@ -1,3 +1,5 @@
+theme "dracula"
+
 keybinds {
     normal {
         unbind "Ctrl t"
