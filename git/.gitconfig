@@ -32,6 +32,7 @@
 	commitGraph = true
 	autocrlf = input
 	safecrlf = false
+  pager = delta
 
 [alias]
 	prune = "fetch --prune"
@@ -85,3 +86,15 @@
 
 [init]
 	defaultBranch = main
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
