@@ -65,11 +65,16 @@ return {
     lazy = false,
     priority = 1000,
   },
+  {
+    "sainnhe/sonokai",
+    lazy = true,
+    priority = 10000,
+  },
   { "rose-pine/neovim", name = "rose-pine" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "dracula",
+      colorscheme = "sonokai",
     },
   },
 }
