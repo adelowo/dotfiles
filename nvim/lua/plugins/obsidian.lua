@@ -7,6 +7,9 @@ return {
     "nvim-lua/plenary.nvim",
   },
   opts = {
+    templates = {
+      folder = "Templates",
+    },
     workspaces = {
       {
         name = "god",
