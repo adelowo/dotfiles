@@ -27,5 +27,6 @@ return {
     { "<leader>gae", "<cmd>GoAddTag env<cr>", desc = "Add env tags" },
     { "<leader>gay", "<cmd>GoAddTag yaml<cr>", desc = "Add YAML tags" },
     { "<leader>gim", "<cmd>GoImplements<cr>", desc = "Find implementions of this method" },
+    { "<leader>gasvr", "<cmd>GoAddTag validate:'required'<cr>", desc = "Add Swagger validate required tags" },
   },
 }
