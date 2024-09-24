@@ -7,10 +7,10 @@ return {
     "rouge8/neotest-rust",
   },
   {
-    "lawrence-laz/neotest-zig"
+    "lawrence-laz/neotest-zig",
   },
   {
     "nvim-neotest/neotest",
-    opts = { adapters = { "neotest-plenary", "neotest-go", "neotest-python", "neotest-rust", "neotest-zig"} },
+    opts = { adapters = { "neotest-plenary", "neotest-go", "neotest-python", "neotest-rust", "neotest-zig" } },
   },
 }
