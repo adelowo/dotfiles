@@ -29,6 +29,7 @@ return {
         "vim",
         "yaml",
         "zig",
+        "rust",
       },
     },
   },
