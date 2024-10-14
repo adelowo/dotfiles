@@ -68,6 +68,6 @@ null_ls.setup({
 
 require("lualine").setup({
   sections = {
-    lualine_c = { "filename", require("pomodoro").statusline },
+    lualine_c = { "filename" },
   },
 })
