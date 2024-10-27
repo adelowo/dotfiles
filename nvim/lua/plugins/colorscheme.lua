@@ -72,9 +72,16 @@ return {
   },
   { "rose-pine/neovim", name = "rose-pine" },
   {
+    "bettervim/yugen.nvim",
+    config = function()
+      vim.cmd.colorscheme("yugen")
+    end,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa-dragon",
+      -- colorscheme = "kanagawa-dragon",
+      colorscheme = "yugen",
     },
   },
 }
