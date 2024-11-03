@@ -75,10 +75,13 @@ return {
     "bettervim/yugen.nvim",
   },
   {
+    "nyoom-engineering/oxocarbon.nvim",
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa-wave",
-      -- colorscheme = "yugen",
+      -- colorscheme = "kanagawa-wave",
+      colorscheme = "oxocarbon",
     },
   },
 }
