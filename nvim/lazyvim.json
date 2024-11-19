@@ -2,10 +2,11 @@
   "extras": [
     "lazyvim.plugins.extras.formatting.black",
     "lazyvim.plugins.extras.lang.markdown",
-    "lazyvim.plugins.extras.lang.yaml"
+    "lazyvim.plugins.extras.lang.yaml",
+    "lazyvim.plugins.extras.lang.zig"
   ],
   "news": {
-    "NEWS.md": "7107"
+    "NEWS.md": "7429"
   },
   "version": 7
 }
