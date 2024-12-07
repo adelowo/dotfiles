@@ -7,6 +7,6 @@ config.color_scheme = "Kanagawa Dragon (Gogh)"
 config.hide_tab_bar_if_only_one_tab = true
 
 config.font = wezterm.font("Monaspace Radon")
-config.font_size = 22
+config.font_size = 20
 
 return config
