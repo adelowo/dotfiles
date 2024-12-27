@@ -1,0 +1,11 @@
+font-size = 30
+font-family = Monaspace Radon
+
+mouse-scroll-multiplier = 0.5
+
+window-decoration = true
+window-padding-x = 8
+window-padding-y = 8
+
+theme = catppuccin-mocha
+font-feature = -liga
