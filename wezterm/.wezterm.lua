@@ -14,6 +14,6 @@ config.font = wezterm.font({
 config.font_size = 22
 
 --  twitch/YT scene
--- config.font_size = 26
+-- config.font_size = 24
 
 return config
