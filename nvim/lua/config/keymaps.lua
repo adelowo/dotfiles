@@ -3,8 +3,3 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("n", "<leader>su", vim.cmd.UndotreeToggle)
-
--- Telescope
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>p", builtin.git_files, {})
-vim.keymap.set("n", "<leader>h", builtin.help_tags, {})

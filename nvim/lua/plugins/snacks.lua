@@ -22,6 +22,20 @@ return {
       end,
       desc = "Toggle Snacks zen mode",
     },
+    {
+      "<leader>p",
+      function()
+        Snacks.picker.git_files()
+      end,
+      desc = "Find git files",
+    },
+    {
+      "<leader>hh",
+      function()
+        Snacks.picker.help()
+      end,
+      desc = "Find Neovim help tags",
+    },
   },
   opts = {
     --- ZEN
