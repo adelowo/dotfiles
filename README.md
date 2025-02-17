@@ -7,6 +7,7 @@ I am making critical updates to my dotfiles. Why?
 - To fix organization. I started using Neovim in 2017 and i ended up with a
   ridiculously large `init.vim` because i was just learning on the go
   and kept adding stuff to the same file. It became hard to read/find simple configs
+
 - Moving onto better tech. Vimscript is ugly and annoying to write. I am
   switching fully to Lua
 

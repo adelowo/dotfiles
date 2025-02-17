@@ -1,10 +1,71 @@
 return {
   "folke/snacks.nvim",
-  ---@class snacks.dashboard.Config
-  ---@field enabled? boolean
-  ---@field sections snacks.dashboard.Section
-  ---@field formats table<string, snacks.dashboard.Text|fun(item:snacks.dashboard.Item, ctx:snacks.dashboard.Format.ctx):snacks.dashboard.Text>
+  keys = {
+    {
+      "<leader>e",
+      function()
+        Snacks.explorer()
+      end,
+      desc = "File Explorer",
+    },
+    {
+      "<leader>se",
+      function()
+        Snacks.picker.explorer()
+      end,
+      desc = "Open Snacks explorer",
+    },
+    {
+      "<leader>sz",
+      function()
+        Snacks.zen()
+      end,
+      desc = "Toggle Snacks zen mode",
+    },
+  },
   opts = {
+    --- ZEN
+    ---
+    ---
+    ---
+    ---
+    zen = {
+      enabled = true,
+    },
+    --- END ZEN
+
+    --- EXPLORER
+    ---@class snacks.explorer.Config
+    explorer = {
+      enabled = true,
+      -- your explorer configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+      replace_netrw = true, -- Replace netrw with the snacks explorer
+    },
+    picker = {
+      enabled = true,
+      sources = {
+        explorer = {
+          layout = { layout = { position = "right" } },
+          hidden = true,
+        },
+        files = {
+          hidden = true,
+          follow = true,
+        },
+      },
+    },
+    ---  END EXPLORER
+
+    --- DASHBOARD
+    ---
+    ---
+    ---
+    ---@class snacks.dashboard.Config
+    ---@field enabled? boolean
+    ---@field sections snacks.dashboard.Section
+    ---@field formats table<string, snacks.dashboard.Text|fun(item:snacks.dashboard.Item, ctx:snacks.dashboard.Format.ctx):snacks.dashboard.Text>
     dashboard = {
       width = 60,
       row = nil, -- dashboard position. nil for center
