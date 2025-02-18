@@ -52,10 +52,7 @@ return {
     ---@class snacks.explorer.Config
     explorer = {
       enabled = true,
-      -- your explorer configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-      replace_netrw = true, -- Replace netrw with the snacks explorer
+      replace_netrw = true,
     },
     picker = {
       enabled = true,
@@ -63,6 +60,15 @@ return {
         explorer = {
           layout = { layout = { position = "right" } },
           hidden = true,
+          git_untracked = true,
+          win = {
+            list = {
+              keys = {
+                ["h"] = "toggle_hidden",
+                ["i"] = "toggle_ignored",
+              },
+            },
+          },
         },
         files = {
           hidden = true,
