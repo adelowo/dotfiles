@@ -61,6 +61,7 @@ return {
           layout = { layout = { position = "right" } },
           hidden = true,
           git_untracked = true,
+          exclude = { "node_modules", "vendor", "docker-data" },
           win = {
             list = {
               keys = {
