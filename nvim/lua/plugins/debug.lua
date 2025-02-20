@@ -1,3 +1,14 @@
+vim.fn.sign_define("DapBreakpoint", {
+  text = "🔴",
+  numhl = "DapBreakpoint",
+})
+
+vim.fn.sign_define("DapBreakpointCondition", {
+  text = "🔴",
+  linehl = "DapBreakpoint",
+  numhl = "DapBreakpoint",
+})
+
 return {
   "mfussenegger/nvim-dap",
   dependencies = {

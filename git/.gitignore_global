@@ -13,3 +13,4 @@ oops.md
 zig-out/
 storage/
 .infisical.json
+docker-data/
