@@ -16,5 +16,9 @@ return {
         path = "/Users/lanreadelowo/Library/Mobile Documents/iCloud~md~obsidian/Documents/god",
       },
     },
+    daily_notes = {
+      folder = "Daily notes",
+      template = "daily.md",
+    },
   },
 }

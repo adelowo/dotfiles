@@ -100,3 +100,6 @@
     colorMoved = default
 [rerere]
 	enabled = true
+[safe]
+	directory = /workdir
+	directory = /workdir
