@@ -2,7 +2,7 @@
 
 Currently using Zellij and Wezterm
 
-I am making critical updates to my dotfiles. Why?
+I am always making updates to my dotfiles. Why?
 
 - To fix organization. I started using Neovim in 2017 and i ended up with a
   ridiculously large `init.vim` because i was just learning on the go
