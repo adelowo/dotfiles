@@ -103,3 +103,6 @@
 [safe]
 	directory = /workdir
 	directory = /workdir
+	directory = /workdir
+	directory = /workdir
+	directory = /workdir

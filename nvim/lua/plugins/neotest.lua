@@ -10,7 +10,19 @@ return {
     "lawrence-laz/neotest-zig",
   },
   {
+    "alfaix/neotest-gtest",
+  },
+  {
     "nvim-neotest/neotest",
-    opts = { adapters = { "neotest-plenary", "neotest-go", "neotest-python", "neotest-rust", "neotest-zig" } },
+    opts = {
+      adapters = {
+        "neotest-plenary",
+        "neotest-go",
+        "neotest-python",
+        "neotest-rust",
+        "neotest-zig",
+        -- "neotest-gtest",
+      },
+    },
   },
 }

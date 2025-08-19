@@ -10,8 +10,9 @@ config.font = wezterm.font({
 	weight = "Bold",
 })
 
--- normal scene
-config.font_size = 22
+-- normal workdesk scene because of monitors
+-- disable if working on mac
+config.font_size = 20
 
 --  twitch/YT scene
 -- config.font_size = 24
