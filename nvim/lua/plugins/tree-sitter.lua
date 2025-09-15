@@ -30,6 +30,7 @@ return {
         "yaml",
         "zig",
         "rust",
+        "php",
       },
     },
   },

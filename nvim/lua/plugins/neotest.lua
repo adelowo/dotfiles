@@ -9,9 +9,9 @@ return {
   {
     "lawrence-laz/neotest-zig",
   },
-  {
-    "alfaix/neotest-gtest",
-  },
+  -- {
+  --   "alfaix/neotest-gtest",
+  -- },
   {
     "nvim-neotest/neotest",
     opts = {

@@ -5,6 +5,7 @@ export LANG="en_US.UTF-8"
 export GPG_TTY=$(tty)
 
 export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix go)/libexec"
 export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/go/bin:$HOME/.config/composer/vendor/bin:$GOPATH/bin:/usr/local/mysql/bin:$HOME/flutter/bin:Users/${USER}/Library/Android/sdk/platform-tools
 export PATH=/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.0.0/bin:$PATH
 export PATH="/usr/local/sbin:$PATH"
@@ -137,3 +138,5 @@ if [ -f '/Users/lanreadelowo/google-cloud-sdk/completion.zsh.inc' ]; then . '/Us
 
 ## always open zellij
 eval "$(zellij setup --generate-auto-start zsh)"
+
+. "$HOME/.local/bin/env"
