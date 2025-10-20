@@ -6,9 +6,16 @@ return {
     "nvim-treesitter/nvim-treesitter",
   },
   config = function()
-    require("go").setup()
+    require("go").setup({
+      lsp_cfg = {
+        settings = {
+          gopls = {
+            buildFlags = { "-tags=cli" },
+          },
+        },
+      },
+    })
 
-    -- Run gofmt + goimport on save
     local format_sync_grp = vim.api.nvim_create_augroup("GoImport", {})
     vim.api.nvim_create_autocmd("BufWritePre", {
       pattern = "*.go",
