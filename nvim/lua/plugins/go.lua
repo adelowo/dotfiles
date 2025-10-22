@@ -8,6 +8,10 @@ return {
   config = function()
     require("go").setup({
       lsp_cfg = {
+        on_attach = function(client, bufnr)
+          -- unmap Go.nvim's <leader>e as i have it set to snacks.nvim already
+          pcall(vim.keymap.del, "n", "<leader>e", { buffer = bufnr })
+        end,
         settings = {
           gopls = {
             buildFlags = { "-tags=cli" },
