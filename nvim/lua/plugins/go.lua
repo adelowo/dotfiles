@@ -1,6 +1,5 @@
 return {
   "ray-x/go.nvim",
-  branch = "treesitter-main",
   dependencies = {
     "ray-x/guihua.lua",
     "neovim/nvim-lspconfig",
