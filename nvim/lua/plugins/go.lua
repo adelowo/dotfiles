@@ -14,7 +14,7 @@ return {
         end,
         settings = {
           gopls = {
-            buildFlags = { "-tags=cli,test,gencmd" },
+            buildFlags = { "-tags=cli,test,gencmd,trustcenter" },
           },
         },
       },

@@ -17,4 +17,8 @@ config.font_size = 20
 --  twitch/YT scene
 -- config.font_size = 24
 
+config.keys = {
+  {key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"}},
+}
+
 return config
