@@ -28,7 +28,7 @@ export PATH="$PATH:$(brew --prefix llvm@15)/bin"
 export LDFLAGS="$LDFLAGS -L$(brew --prefix llvm@15)/lib"
 export CPPFLAGS="$CPPFLAGS -I$(brew --prefix llvm@15)/include"
 
-source $HOME/.cargo/env
+# source $HOME/.cargo/env
 
 lg()
 {
@@ -139,4 +139,4 @@ if [ -f '/Users/lanreadelowo/google-cloud-sdk/completion.zsh.inc' ]; then . '/Us
 ## always open zellij
 eval "$(zellij setup --generate-auto-start zsh)"
 
-. "$HOME/.local/bin/env"
+# . "$HOME/.local/bin/env"
