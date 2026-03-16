@@ -14,7 +14,7 @@ return {
         end,
         settings = {
           gopls = {
-            buildFlags = { "-tags=cli,test,gencmd,trustcenter" },
+            buildFlags = { "-tags=cli,test,gencmd," },
           },
         },
       },
@@ -37,6 +37,7 @@ return {
     { "<leader>gam", "<cmd>GoAddTag mapstructure<cr>", desc = "Add mapstructure tags" },
     { "<leader>gae", "<cmd>GoAddTag env<cr>", desc = "Add env tags" },
     { "<leader>gay", "<cmd>GoAddTag yaml<cr>", desc = "Add YAML tags" },
+    { "<leader>gab", "<cmd>GoAddTag bun<cr>", desc = "Add bun tags" },
     { "<leader>gasvr", "<cmd>GoAddTag validate:required<cr>", desc = "Add Swagger validate required tags" },
     { "<leader>gasvo", "<cmd>GoAddTag validate:optional<cr>", desc = "Add Swagger validate optional tags" },
 
