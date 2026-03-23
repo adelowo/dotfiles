@@ -17,3 +17,4 @@ docker-data/
 CLAUDE.md
 AGENTS.md
 .claude/
+.zig-cache/
