@@ -18,3 +18,4 @@ CLAUDE.md
 AGENTS.md
 .claude/
 .zig-cache/
+opencode.json
