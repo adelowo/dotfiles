@@ -133,6 +133,12 @@ source <(forge completions zsh)
 source <(localstack completion zsh)
 source <(flyctl completion zsh)
 
+# keep readline-style cursor movement while zsh is using vi insert mode.
+bindkey -M main '^A' beginning-of-line
+bindkey -M main '^E' end-of-line
+bindkey -M viins '^A' beginning-of-line
+bindkey -M viins '^E' end-of-line
+
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/lanreadelowo/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lanreadelowo/google-cloud-sdk/completion.zsh.inc'; fi
 
