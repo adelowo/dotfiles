@@ -15,3 +15,6 @@ vim.cmd("set colorcolumn=120")
 vim.cmd("highlight ColorColumn ctermbg=red guibg=red")
 
 vim.g.lazyvim_php_lsp = "intelephense"
+
+-- try tsgo
+vim.g.lazyvim_ts_lsp = "tsgo"
