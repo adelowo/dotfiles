@@ -75,9 +75,6 @@ return {
     "bettervim/yugen.nvim",
   },
   {
-    "nyoom-engineering/oxocarbon.nvim",
-  },
-  {
     "zenbones-theme/zenbones.nvim",
     dependencies = "rktjmp/lush.nvim",
     lazy = false,
@@ -87,7 +84,6 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "kanagawa-wave",
-      -- colorscheme = "oxocarbon",
     },
   },
 }
