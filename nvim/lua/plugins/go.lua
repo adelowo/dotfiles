@@ -10,6 +10,7 @@ return {
       lsp_cfg = {
         on_attach = function(client, bufnr)
           -- unmap Go.nvim's <leader>e as i have it set to snacks.nvim already
+          -- <leader>e is for the file explorer btw
           pcall(vim.keymap.del, "n", "<leader>e", { buffer = bufnr })
         end,
         settings = {
@@ -42,5 +43,7 @@ return {
     { "<leader>gasvo", "<cmd>GoAddTag validate:optional<cr>", desc = "Add Swagger validate optional tags" },
 
     { "<leader>gim", "<cmd>GoImplements<cr>", desc = "Find implementions of this method" },
+    -- clashing with mini ai and don't have the time to fix right now
+    -- { "<leader>gawhere", "<cmd>lua vim.lsp.buf.incoming_calls()<cr>", desc = "Find incoming calls" },
   },
 }
