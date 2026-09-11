@@ -443,3 +443,5 @@ show_startup_tips false
 // Default: true
 // 
 // show_release_notes false
+
+pane_frame_style "full"
