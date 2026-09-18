@@ -11,12 +11,10 @@ __pycache__/
 oops.md
 .zig-cache/
 zig-out/
-storage/
 .infisical.json
 docker-data/
 CLAUDE.md
 AGENTS.md
 .claude/
-.zig-cache/
 opencode.json
 review.md
